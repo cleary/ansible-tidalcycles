@@ -3,6 +3,7 @@
 
   roles:
     - roles/packages
+    - roles/compile
 
   vars:
     repos:
