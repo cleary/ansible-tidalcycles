@@ -1,7 +1,7 @@
 ---
 - name: add apt_keys for additional repositories
   apt_key:
-    id: "{{ signing_key }}"
+    id: "{{ item.signing_key }}"
     state: present
   with_items: "{{ repos }}"
 
