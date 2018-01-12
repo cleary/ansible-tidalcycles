@@ -3,6 +3,7 @@
   apt_key:
     id: "{{ item.signing_key }}"
     state: present
+    keyserver: "keyserver.ubuntu.com"
   with_items: "{{ repos }}"
 
 - name: add additional repositories to sources.list.d
