@@ -1,0 +1,7 @@
+---
+
+- name: update cabal
+  shell: cabal update
+
+- name: compile and install tidal
+  shell: cabal install tidal
