@@ -11,3 +11,8 @@
         suite: "artful"
         components: "main"
         signing_key: "7B2C3B0889BF5709A105D03AC2518248EEA14886"
+      - label: "spotify"
+        uri: "http://repository.spotify.com"
+        suite: "stable"
+        components: "non-free"
+        signing_key: "0DF731E45CE24F27EEEB1450EFDC8610341D9410"
