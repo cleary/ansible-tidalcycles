@@ -3,10 +3,10 @@
 - name: update cabal
   shell: cabal update  
   register: cabup
-  changed_when: "cabup.stdout != '*Skipping download: local and remote files match.*'"
+  changed_when: "not cabup.stdout|search('Skipping download: local and remote files match.')"
 
 
 - name: compile and install tidal
   shell: cabal install tidal
   register: tidin
-  changed_when: "tidin.stdout != '*All the requested packages are already installed:*'"
+  changed_when: "not tidin.stdout|search('All the requested packages are already installed:')"
