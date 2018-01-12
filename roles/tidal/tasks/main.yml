@@ -1,5 +1,7 @@
 ---
 
+- include_tasks: install-packages.yml      
+
 - block:
   - include_tasks: install-software.yml
   become: true

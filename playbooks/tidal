@@ -2,8 +2,7 @@
 - hosts: localhost
 
   roles:
-    - roles/packages
-    - roles/compile
+    - roles/tidal
 
   vars:
     repos:
