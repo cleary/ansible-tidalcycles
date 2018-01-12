@@ -9,4 +9,4 @@
 - name: compile and install tidal
   shell: cabal install tidal
   register: tidin
-  changed_when: "tidup.stdout != '*All the requested packages are already installed:*'"
+  changed_when: "tidin.stdout != '*All the requested packages are already installed:*'"
