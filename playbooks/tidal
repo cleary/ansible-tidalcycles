@@ -2,6 +2,7 @@
 - hosts: localhost
 
   roles:
+    - roles/packages
     - roles/tidal
 
   vars:
