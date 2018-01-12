@@ -1,7 +1,12 @@
 ---
 
 - name: update cabal
-  shell: cabal update
+  shell: cabal update  
+  register: cabup
+  changed_when: "cabup.stdout != '*Skipping download: local and remote files match.*'"
+
 
 - name: compile and install tidal
   shell: cabal install tidal
+  register: tidin
+  changed_when: "tidup.stdout != '*All the requested packages are already installed:*'"
