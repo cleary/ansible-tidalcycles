@@ -10,3 +10,12 @@
   shell: cabal install tidal
   register: tidin
   changed_when: "not tidin.stdout|search('All the requested packages are already installed:')"
+
+- name: check if tidalcycles atom plugin is installed
+  shell: apm list -i
+  register: tidatin
+  changed_when: "not tidatin.stdout|search('tidalcycles')"
+
+- name: install tidalcycles atom plugin
+  shell: apm install tidalcycles
+  when: "not tidatin.stdout|search('tidalcycles')"
