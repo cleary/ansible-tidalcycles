@@ -9,6 +9,7 @@
     custom_package_list:
       - spotify-client
       - nextcloud-client
+      - gtklick
 
     repos:
       - label: "atom"
