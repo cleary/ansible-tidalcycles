@@ -8,6 +8,7 @@
   vars:
     custom_package_list:
       - spotify-client
+      - nextcloud-client
       - gtklick
       #- nextcloud-client
 
@@ -17,13 +18,13 @@
         suite: "artful"
         components: "main"
         signing_key: "7B2C3B0889BF5709A105D03AC2518248EEA14886"
+      - label: "nextcloud"
+        uri: "http://ppa.launchpad.net/nextcloud-devs/client/ubuntu"
+        suite: "artful"
+        components: "main"
+        signing_key: "1FCD77DD0DBEF5699AD2610160EE47FBAD3DD469"
       - label: "spotify"
         uri: "http://repository.spotify.com"
         suite: "stable"
         components: "non-free"
-        signing_key: "0DF731E45CE24F27EEEB1450EFDC8610341D9410"
-      #- label: "nextcloud"
-      #  uri: "http://ppa.launchpad.net/nextcloud-devs/client/ubuntu"
-      #  suite: "artful"
-      #  components: "main"
-      #  signing_key: "1FCD77DD0DBEF5699AD2610160EE47FBAD3DD469"
+        signing_key: "931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90"
