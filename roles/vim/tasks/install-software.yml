@@ -1,0 +1,24 @@
+---
+
+- block:
+  - name: clone vimrc repo from https://github.com/cleary/vimrc.git
+    repo: https://github.com/cleary/vimrc.git
+    dest: "{{ ansible_env.HOME }}/.vim/"
+  
+  - name: moving existing ~/.vimrc to ~/.vimrc.bck
+    shell: "mv {{ ansible_env.HOME }}/.vimrc {{ ansible_env.HOME }}/.vimrc.bck"
+    failed_when: False
+
+  - name: create symbolic link to our new ~/.vimrc
+    file:
+      src: "{{ ansible_env.HOME }}/.vim/dot.vimrc"
+      dest: "{{ ansible_env.HOME }}/.vimrc"
+      state: link
+
+  - name: build command-t plugin
+    shell: "pushd {{ ansible_env.HOME }}/.vim/command-t/ && rake make && popd"
+
+  become: yes
+  become_method: su
+  become_user: "{{ansible_env.SUDO_USER}}"
+  become_flags: '-s /bin/bash'

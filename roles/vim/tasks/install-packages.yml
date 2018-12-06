@@ -1,0 +1,9 @@
+---
+- name: install packages
+  apt: name={{ item }} state=latest update_cache=yes install_recommends=yes
+  with_items:
+    - vim-nox
+    - ruby-dev
+    - rake
+    - flake8
+    - build-essential     

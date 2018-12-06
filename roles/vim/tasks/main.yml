@@ -1,0 +1,11 @@
+---
+
+- include_tasks: install-packages.yml      
+
+- block:
+  - include_tasks: install-software.yml
+  become: true
+  become_user: "{{ ansible_env.SUDO_USER }}"
+  become_flags: '-s /bin/sh'
+  become_method: su
+
