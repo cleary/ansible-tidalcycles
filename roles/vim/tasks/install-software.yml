@@ -17,7 +17,7 @@
       state: link
 
   - name: build command-t plugin
-    shell: "pushd {{ ansible_env.HOME }}/.vim/command-t/ && rake make && popd"
+    shell: "cd {{ ansible_env.HOME }}/.vim/command-t/ && rake make && popd"
   become: yes
   become_method: su
   become_user: "{{ansible_env.SUDO_USER}}"
