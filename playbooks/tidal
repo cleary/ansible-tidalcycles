@@ -4,20 +4,24 @@
   roles:
     - roles/packages
     - roles/tidal
+    - roles/vim
 
   vars:
     custom_package_list:
       - spotify-client
       - nextcloud-client
       - gtklick
-      #- nextcloud-client
 
     repos:
       - label: "atom"
-        uri: "http://ppa.launchpad.net/webupd8team/atom/ubuntu"
-        suite: "artful"
+        uri: https://packagecloud.io/AtomEditor/atom/any/
+        suite: "any"
         components: "main"
-        signing_key: "7B2C3B0889BF5709A105D03AC2518248EEA14886"
+        signing_key: DE9E3B09
+      #  uri: "http://ppa.launchpad.net/webupd8team/atom/ubuntu"
+      #  suite: "artful"
+      #  components: "main"
+      #  signing_key: "7B2C3B0889BF5709A105D03AC2518248EEA14886"
       - label: "nextcloud"
         uri: "http://ppa.launchpad.net/nextcloud-devs/client/ubuntu"
         suite: "artful"
