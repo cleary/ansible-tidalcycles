@@ -24,7 +24,7 @@
       #  signing_key: "7B2C3B0889BF5709A105D03AC2518248EEA14886"
       - label: "nextcloud"
         uri: "http://ppa.launchpad.net/nextcloud-devs/client/ubuntu"
-        suite: "artful"
+        suite: "disco"
         components: "main"
         signing_key: "1FCD77DD0DBEF5699AD2610160EE47FBAD3DD469"
       - label: "spotify"
