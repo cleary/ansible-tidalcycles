@@ -1,0 +1,3 @@
+[submodule "roles/vscode"]
+	path = roles/vscode
+	url = https://github.com/cleary/ansible-tidalcycles-editor-vscode.git
