@@ -5,6 +5,7 @@ ansible playbooks/roles for installing various bits and pieces in Ubuntu Linux (
 This repository is now using git-submodules for roles, so use the following clone command:
 
 ```
+sudo apt install ansible git
 git clone --recurse-submodules https://github.com/cleary/ansible.git
 cd ansible
 ```
