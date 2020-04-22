@@ -1,7 +1,7 @@
 # ansible
 ansible playbooks/roles for installing various bits and pieces in Ubuntu Linux (primarily, it may be trivial to port it to other distros). I tend to track current releases, so don't expect support for versions older than current (but checkout older code!)
 
-# Usage:
+# usage:
 This repository is now using git-submodules for roles, so use the following clone command:
 
 ```
@@ -25,7 +25,7 @@ Install the vscode editor from microsoft, including useful plugins for Tidal Cyc
 ## packages
 Install custom packages defined in playbooks (WIP/todo)
 
-# Todo:
+# todo:
 * add other editor roles, atom/vim
 * change packages to install a list of packages
 * add basic superdirt startup
