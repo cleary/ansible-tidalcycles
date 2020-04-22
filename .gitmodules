@@ -4,3 +4,6 @@
 [submodule "roles/tidal"]
 	path = roles/tidal
 	url = https://github.com/cleary/ansible-tidalcycles-base.git
+[submodule "roles/atom"]
+	path = roles/atom
+	url = https://github.com/cleary/ansible-tidalcycles-editor-atom.git

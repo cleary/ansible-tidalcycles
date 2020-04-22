@@ -12,7 +12,11 @@ cd ansible
 To apply the setup to a local machine:
 
 ```
+# for vscode
 sudo ansible-playbook --connection=local -i localhost, playbooks/tidal_vscode.yml
+
+# for atom
+sudo ansible-playbook --connection=local -i localhost, playbooks/tidal_atom.yml
 ```
 
 # roles
@@ -23,6 +27,9 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-base
 
 ## vscode
 Install the vscode editor from microsoft, including useful plugins for Tidal Cycles and Haskell.
+
+## atom
+Install the atom editor, including useful plugins for Tidal Cycles.
 
 ## packages
 Install custom packages defined in playbooks (WIP/todo)
