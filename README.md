@@ -6,6 +6,7 @@ This repository is now using git-submodules for roles, so use the following clon
 
 ```
 git clone --recurse-submodules https://github.com/cleary/ansible.git
+cd ansible
 ```
 To apply the setup to a local machine:
 
