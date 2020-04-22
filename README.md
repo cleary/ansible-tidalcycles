@@ -1,5 +1,5 @@
 # ansible
-ansible playbooks/roles for installing various bits and pieces
+ansible playbooks/roles for installing various bits and pieces in Ubuntu Linux (primarily, it may be trivial to port it to other distros). I tend to track current releases, so don't expect support for versions older than current (but checkout older code!)
 
 # Usage:
 This repository is now using git-submodules for roles, so use the following clone command:
