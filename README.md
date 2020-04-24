@@ -1,7 +1,7 @@
 # ansible
 ansible playbooks/roles for installing various linux DAW tools on ubuntu >= 20.04
 
-Presently, this exists to simplify the Tidal Cycles live coding environment install, with multiple playbooks supporting common editors used in Tidal (vscode, atom, vim).
+Presently, this exists to simplify the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal (vscode, atom, vim).
 
 # usage:
 This repository is now using git-submodules for roles, so use the following clone command:
@@ -27,7 +27,7 @@ sudo ansible-playbook --connection=local -i localhost, playbooks/tidal_vim.yml
 # roles
 
 ## tidal
-Install Tidal Cycles (http://tidalcycles.org) and dependencies (supercollider, haskell etc).
+Install Tidal Cycles (http://tidalcycles.org) and dependencies (supercollider, haskell etc). It does not (yet) automate the first time SuperDirt startup tasks - please see [this guide](https://tidalcycles.org/index.php/Start_tidalcycles_and_superdirt_for_the_first_time)
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-base
 
 ## vscode
