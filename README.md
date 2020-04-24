@@ -51,5 +51,5 @@ Install custom packages defined in playbooks (WIP/todo)
 * add support for sample paths in superdirt startup and vscode/tidalcycles plugin
 * add basic tidal intro file
 
-# Notes to self:
+# notes to self:
 * `git submodule update --remote [--merge]`
