@@ -1,5 +1,7 @@
 # ansible
-ansible playbooks/roles for installing various bits and pieces in Ubuntu Linux (primarily, it may be trivial to port it to other distros). I tend to track current releases, so don't expect support for versions older than current (but checkout older code!)
+ansible playbooks/roles for installing various linux DAW tools on ubuntu >= 20.04
+
+Presently, this exists to simplify the Tidal Cycles live coding environment install, with multiple playbooks supporting common editors used in Tidal (vscode, atom, vim).
 
 # usage:
 This repository is now using git-submodules for roles, so use the following clone command:
@@ -9,16 +11,16 @@ sudo apt install ansible git
 git clone --recurse-submodules https://github.com/cleary/ansible.git
 cd ansible
 ```
-To apply the setup to a local machine:
+To apply the setup to a local machine, pick a playbook (please note they are not mutually exclusive - try them all out!):
 
 ```
-# for vscode
+# for tidalcycles + vscode
 sudo ansible-playbook --connection=local -i localhost, playbooks/tidal_vscode.yml
 
-# for atom
+# for tidalcycles + atom
 sudo ansible-playbook --connection=local -i localhost, playbooks/tidal_atom.yml
 
-# for vim - warning, it will clobber your .vimrc (but take a backup)
+# for tidalcycles + vim - warning, it will clobber your .vimrc (but take a backup)
 sudo ansible-playbook --connection=local -i localhost, playbooks/tidal_vim.yml
 ```
 
