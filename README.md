@@ -44,7 +44,6 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vi
 Install custom packages defined in playbooks (WIP/todo)
 
 # todo:
-* add other editor roles, atom/vim
 * change packages to install a list of packages
 * add basic superdirt startup
 * add support for sample paths in superdirt startup and vscode/tidalcycles plugin
