@@ -7,3 +7,6 @@
 [submodule "roles/atom"]
 	path = roles/atom
 	url = https://github.com/cleary/ansible-tidalcycles-editor-atom.git
+[submodule "roles/vim"]
+	path = roles/vim
+	url = https://github.com/cleary/ansible-tidalcycles-editor-vim.git
