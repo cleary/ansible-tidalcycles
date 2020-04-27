@@ -47,7 +47,6 @@ Install custom packages defined in playbooks (WIP/todo)
 
 # todo:
 * change packages to install a list of packages
-* add basic superdirt startup
 * add support for sample paths in superdirt startup and vscode/tidalcycles plugin
 * add basic tidal intro file
 
