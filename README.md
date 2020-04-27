@@ -14,6 +14,9 @@ cd ansible
 To apply the setup to a local machine, pick a playbook (please note they are not mutually exclusive - try them all out!):
 
 ```
+# for tidalcycles standalone
+sudo ansible-playbook --connection=local -i localhost, playbooks/tidal.yml
+
 # for tidalcycles + vscode
 sudo ansible-playbook --connection=local -i localhost, playbooks/tidal_vscode.yml
 
