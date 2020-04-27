@@ -53,15 +53,14 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-at
 ## vim
 Install the vim-nox editor, including the tidal-vim plugin (and dependencies) for Tidal Cycles.
 
+If you provide a list of samples paths via the variable *custom_sample_paths* in your playbook, these will be added to your settings.json for the Sample Path Browser in the tidalcycles plugin.
+
+Please note, this *will* replace any existing settings.json, but keep a backup in the same directory, to allow merge/revert.
+
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
 
 ## packages
 Install custom packages defined in playbooks (WIP/todo)
-
-# todo:
-* change packages to install a list of packages
-* add support for sample paths in vscode/tidalcycles plugin template ./.config/Code/User/settings.json
-* add basic tidal intro file
 
 # notes to self:
 * `git submodule update --remote [--merge]`
