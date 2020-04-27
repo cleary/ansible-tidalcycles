@@ -1,4 +1,4 @@
-# ansible
+# ansiblise installation of tidalcycles environment(s)
 ansible playbooks/roles for installing various linux DAW tools on ubuntu >= 20.04
 
 Presently, this exists to simplify the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal (vscode, atom, vim).
