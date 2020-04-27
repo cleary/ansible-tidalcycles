@@ -43,6 +43,10 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-base
 ## vscode
 Install the vscode editor from microsoft, including useful plugins for Tidal Cycles and Haskell.
 
+If you provide a list of samples paths via the variable *custom_sample_paths* in your playbook, these will be added to your settings.json for the Sample Path Browser in the tidalcycles plugin.
+
+Please note, this *will* replace any existing settings.json, but keep a backup in the same directory, to allow merge/revert.
+
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vscode
 
 ## atom
@@ -52,10 +56,6 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-at
 
 ## vim
 Install the vim-nox editor, including the tidal-vim plugin (and dependencies) for Tidal Cycles.
-
-If you provide a list of samples paths via the variable *custom_sample_paths* in your playbook, these will be added to your settings.json for the Sample Path Browser in the tidalcycles plugin.
-
-Please note, this *will* replace any existing settings.json, but keep a backup in the same directory, to allow merge/revert.
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
 
