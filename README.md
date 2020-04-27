@@ -42,14 +42,17 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-base
 
 ## vscode
 Install the vscode editor from microsoft, including useful plugins for Tidal Cycles and Haskell.
+
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vscode
 
 ## atom
 Install the atom editor, including useful plugins for Tidal Cycles.
+
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-atom
 
 ## vim
 Install the vim-nox editor, including the tidal-vim plugin (and dependencies) for Tidal Cycles.
+
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
 
 ## packages
