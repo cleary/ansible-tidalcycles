@@ -60,7 +60,7 @@ Install custom packages defined in playbooks (WIP/todo)
 
 # todo:
 * change packages to install a list of packages
-* add support for sample paths in vscode/tidalcycles plugin
+* add support for sample paths in vscode/tidalcycles plugin template ./.config/Code/User/settings.json
 * add basic tidal intro file
 
 # notes to self:
