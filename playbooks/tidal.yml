@@ -3,7 +3,6 @@
 
   roles:
     - roles/tidal
-    - roles/atom
 
   vars:
     # uncomment below to add custom sample paths
