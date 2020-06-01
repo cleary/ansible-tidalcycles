@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+
+  pre_tasks:
+    - include_vars: vars/all.yml
+
+  roles:
+    - roles/tidal
+    - roles/vim
