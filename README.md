@@ -1,15 +1,13 @@
 # ansiblise installation of tidalcycles environment(s)
-ansible roles for installing various linux DAW tools on ubuntu >= 20.04
-
-Presently, this exists to simplify the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal (vscode, atom, vim).
+ansible roles for simplifing the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal (vscode, atom, vim).
 
 # usage:
 This repository is now using git-submodules for roles, so use the following clone command:
 
 ```
 sudo apt install ansible git
-git clone --recurse-submodules https://github.com/cleary/ansible.git
-cd ansible
+git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
+cd ansible-tidalcycles/
 ```
 To apply the setup to a local machine, pick a playbook (please note they are not mutually exclusive - try them all out!):
 
