@@ -68,5 +68,11 @@ Install custom packages defined in playbooks (WIP/todo)
 Support for various custom config attributes will be/is provided here.
 At present, (as a proof of concept) a list of paths to local Samples directories can be provided, and will be picked up and included in the startup.scd file for supercollider, and the vscode/tidalcycles extension browser
 
+# todo
+* vagrant testing
+* molecule unit testing
+* add custom synthdefs to vars
+* add midi defs to vars
+
 # notes to self:
 * `git submodule update --remote [--merge]`
