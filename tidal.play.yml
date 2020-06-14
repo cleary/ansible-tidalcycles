@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: all
 
   pre_tasks:
     - include_vars: vars/all.yml
