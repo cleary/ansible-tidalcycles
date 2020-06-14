@@ -5,3 +5,7 @@
 #
 #custom_sample_paths: [ "/home/user/foo/",
 #                       "/home/user/bar/" ]
+custom_sample_paths: [ "/home/bernie/Music/Samples/Holding_Hands",
+                       "/home/bernie/Music/Samples/Reverb",
+                       "/home/bernie/Music/Samples/jamie-lidell-iso",
+                       "/home/bernie/Music/Samples/samples-extra" ]
