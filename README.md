@@ -1,7 +1,15 @@
 # ansiblise installation of tidalcycles environment(s)
 ansible roles for simplifing the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal (vscode, atom, vim).
 
-**Currently, only supported on ubuntu 20.04 and derivative distros**
+# supported distros
+Rudimentary headless Vagrant testing is now being conducted on `roles/tidal/` (github CI testing integration is on my radar)
+
+Passing:
+ - ubuntu 20.04/focal (and derivatives ie studio kubuntu lubuntu xubuntu etc)
+ - debian 10/buster
+ 
+Failing:
+ - Mint 19.3/Tricia
 
 # usage:
 This repository is now using git-submodules for roles, so use the following clone command:
