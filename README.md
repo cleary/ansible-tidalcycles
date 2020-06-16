@@ -10,6 +10,10 @@ Passing:
  
 Failing:
  - Mint 19.3/Tricia
+ 
+Unsupported:
+ - non-debian based distros (potentially on my radar though)
+ - non-linux environments 
 
 # usage:
 This repository is now using git-submodules for roles, so use the following clone command:
