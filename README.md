@@ -20,7 +20,7 @@ Unsupported:
  - non-linux environments 
 
 # usage:
-This repository is now using git-submodules for roles, so use the following clone command:
+This repository is uses git-submodules for roles, so the following clone command is required:
 
 ```
 sudo apt install ansible git
