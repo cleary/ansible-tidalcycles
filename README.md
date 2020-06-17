@@ -5,13 +5,17 @@ ansible roles for simplifing the [Tidal Cycles](https://tidalcycles.org) live co
 Rudimentary headless Vagrant testing is now being conducted on `roles/tidal/` (github CI testing integration is on my radar)
 
 Passing:
- - ubuntu 20.04/focal (and derivatives ie studio kubuntu lubuntu xubuntu etc)
- - debian 10/buster
- 
-Failing:
- - Mint 19.3/Tricia
+ - ubuntu (and derivatives ie studio kubuntu lubuntu xubuntu etc)
+   - 20.04/focal
+   - 18.04/bionic
+ - debian
+   - 10/buster
+   - 9/stretch
+ - Linux Mint
+   - 19.3/Tricia
  
 Unsupported:
+ - ubuntu 16.04/xenial (supercollider 3.6 is too old for superdirt)
  - non-debian based distros (potentially on my radar though)
  - non-linux environments 
 
