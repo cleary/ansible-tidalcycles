@@ -50,7 +50,7 @@ Install Tidal Cycles (http://tidalcycles.org) and dependencies (SuperCollider, h
 
 This role automates the installation of SuperDirt, and SuperDirt samples in SuperCollider as per [this guide](https://tidalcycles.org/index.php/Start_tidalcycles_and_superdirt_for_the_first_time). It also writes a basic startup.scd as per [this recommendation](https://github.com/musikinformatik/SuperDirt/blob/develop/superdirt_startup.scd).
 
-If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/startup_scd.yml`, these will be added to your startup.scd and loaded on SuperCollider boot.
+If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your startup.scd and loaded on SuperCollider boot.
 
 Please note, this *will* replace any existing startup.scd, but keep a backup in the same directory, to allow merge/revert.
 
@@ -59,7 +59,7 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-base
 ## vscode
 Install the vscode editor from microsoft, including useful plugins for Tidal Cycles and Haskell.
 
-If you provide a list of samples paths via the variable *custom_sample_paths* in your playbook, these will be added to your settings.json for the Sample Path Browser in the tidalcycles plugin.
+If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your settings.json for the Sample Path Browser in the tidalcycles plugin.
 
 Please note, this *will* replace any existing settings.json, but keep a backup in the same directory, to allow merge/revert.
 
