@@ -10,3 +10,6 @@
 [submodule "roles/vim"]
 	path = roles/vim
 	url = https://github.com/cleary/ansible-tidalcycles-editor-vim.git
+[submodule "roles/feedforward"]
+	path = roles/feedforward
+	url = https://github.com/cleary/ansible-tidalcycles-editor-feedforward.git
