@@ -41,6 +41,9 @@ sudo ansible-playbook --connection=local -i localhost, tidal_atom.play.yml
 
 # for tidalcycles + vim - warning, it will clobber your .vimrc (but take a backup)
 sudo ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
+
+# for tidalcycles + feedforward - warning, this is extremely, extremely experimental
+sudo ansible-playbook --connection=local -i localhost, tidal_feedforward.play.yml
 ```
 
 # roles
@@ -74,6 +77,13 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-at
 Install the vim-nox editor, including the tidal-vim plugin (and dependencies) for Tidal Cycles.
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
+
+## feedforward
+Install the **experimental** [feedforward editor](https://github.com/yaxu/feedforward) by @yaxu, VU meter config is automatically included in the startup.scd, and a binary symlink is dropped at `/usr/local/bin/feedforward`
+
+Make sure to check out his README, there are lots of gotchas!
+
+This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-feedforward
 
 # vars
 
