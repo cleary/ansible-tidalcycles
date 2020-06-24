@@ -1,5 +1,5 @@
 # ansible-ise installation of tidalcycles environment(s)
-ansible roles for simplifying the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal (vscode, atom, vim).
+ansible roles for simplifying the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal
 
 # supported distros
 Rudimentary headless Vagrant testing is now being conducted on `roles/tidal/` (github CI testing integration is on my radar)
