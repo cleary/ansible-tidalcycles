@@ -12,6 +12,7 @@ Passing:
    - 10/buster
    - 9/stretch ([failing on feedforward role](https://github.com/cleary/ansible-tidalcycles-editor-feedforward/issues/2))
  - Linux Mint
+   - 20/Ulyana
    - 19.3/Tricia
  
 Unsupported:
