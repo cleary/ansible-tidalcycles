@@ -1,5 +1,5 @@
-# ansiblise installation of tidalcycles environment(s)
-ansible roles for simplifing the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal (vscode, atom, vim).
+# ansible-ise installation of tidalcycles environment(s)
+ansible roles for simplifying the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal
 
 # supported distros
 Rudimentary headless Vagrant testing is now being conducted on `roles/tidal/` (github CI testing integration is on my radar)
@@ -10,7 +10,7 @@ Passing:
    - 18.04/bionic
  - debian
    - 10/buster
-   - 9/stretch
+   - 9/stretch ([failing on feedforward role](https://github.com/cleary/ansible-tidalcycles-editor-feedforward/issues/2))
  - Linux Mint
    - 19.3/Tricia
  
@@ -20,7 +20,10 @@ Unsupported:
  - non-linux environments 
 
 # usage:
-This repository is uses git-submodules for roles, so the following clone command is required:
+
+## initial installation
+
+This repository uses git-submodules for roles, so the following clone command is required:
 
 ```
 sudo apt install ansible git
@@ -45,6 +48,12 @@ sudo ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
 # for tidalcycles + feedforward - warning, this is extremely, extremely experimental
 sudo ansible-playbook --connection=local -i localhost, tidal_feedforward.play.yml
 ```
+## upgrading
+
+The playbooks are designed to be run and re-run, so just run them again to get latest versions of repository packages, haskell packages, git repos etc.
+
+The only minor gotcha is if you significantly modify any config files that are templated, eg `.vimrc`, `startup.scd`, you will need to restore the backed up version (from the install directory) after running
+
 
 # roles
 
@@ -90,6 +99,18 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-fe
 ## all.yml
 Support for various custom config attributes will be/is provided here.
 At present, (as a proof of concept) a list of paths to local Samples directories can be provided, and will be picked up and included in the startup.scd file for supercollider, and the vscode/tidalcycles extension browser
+
+# vagrant
+
+## Vagrantfile.*
+Vagrant config files for our supported distros. Provisions each of the playbooks against a vagrant box running the specified distro. 
+
+Usage:
+```
+VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant up --provision # initialise and provision
+VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant provision      # run the provision tasks against a running box
+VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the box, to allow provision against another clean instance/different distro
+```
 
 # todo
 * molecule unit testing
