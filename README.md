@@ -20,7 +20,7 @@ Unsupported:
  - non-linux environments 
 
 # usage:
-This repository is uses git-submodules for roles, so the following clone command is required:
+This repository uses git-submodules for roles, so the following clone command is required:
 
 ```
 sudo apt install ansible git
@@ -98,7 +98,9 @@ Vagrant config files for our supported distros. Provisions each of the playbooks
 
 Usage:
 ```
-VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant up --provision
+VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant up --provision # initialise and provision
+VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant provision      # run the provision tasks against a running box
+VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the box, to allow provision against another clean instance/different distro
 ```
 
 # todo
