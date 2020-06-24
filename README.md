@@ -20,6 +20,9 @@ Unsupported:
  - non-linux environments 
 
 # usage:
+
+## initial installation
+
 This repository uses git-submodules for roles, so the following clone command is required:
 
 ```
@@ -45,6 +48,12 @@ sudo ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
 # for tidalcycles + feedforward - warning, this is extremely, extremely experimental
 sudo ansible-playbook --connection=local -i localhost, tidal_feedforward.play.yml
 ```
+## upgrading
+
+The playbooks are designed to be run and re-run, so just run them again to get latest versions of repository packages, haskell packages, git repos etc.
+
+The only minor gotcha is if you significantly modify any config files that are templated, eg `.vimrc`, `startup.scd`, you will need to restore the backed up version (from the install directory) after running
+
 
 # roles
 
