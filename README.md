@@ -97,7 +97,9 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-fe
 
 # vars
 
-## all.yml
+## all.yml.example
+Copy this file to `vars/all.yml` and modify to suit your environment.
+
 Support for various custom config attributes will be/is provided here.
 At present, (as a proof of concept) a list of paths to local Samples directories can be provided, and will be picked up and included in the startup.scd file for supercollider, and the vscode/tidalcycles extension browser
 
