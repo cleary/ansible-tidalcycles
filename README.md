@@ -89,9 +89,9 @@ Install the vim-nox editor, including the tidal-vim plugin (and dependencies) fo
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
 
 ## feedforward
-Install the **experimental** [feedforward editor](https://github.com/yaxu/feedforward) by @yaxu, VU meter config is automatically included in the startup.scd, and a binary symlink is dropped at `/usr/local/bin/feedforward`
+Install the **experimental** [feedforward editor](https://github.com/yaxu/feedforward) by [@yaxu](https://github.com/yaxu), VU meter config is automatically included in the startup.scd, and a binary symlink is dropped at `/usr/local/bin/feedforward`
 
-Make sure to check out his README, there are lots of gotchas!
+Make sure to check out his [README](https://github.com/yaxu/feedforward/blob/master/README.md), there are lots of gotchas!
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-feedforward
 
