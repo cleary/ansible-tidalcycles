@@ -106,7 +106,7 @@ At present, (as a proof of concept) a list of paths to local Samples directories
 # vagrant
 
 ## Vagrantfile.*
-Vagrant config files for our supported distros. Provisions each of the playbooks against a vagrant box running the specified distro. 
+Vagrant config files for our supported distros. Provisions each of the playbooks against a vagrant box (virtualbox provider) running the specified distro. 
 
 Usage:
 ```
@@ -116,7 +116,7 @@ VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the
 ```
 
 # todo
-* molecule unit testing
+* try and use docker instead of full vm, should enable simpler CI workflow
 * add custom synthdefs to vars
 * add midi defs to vars
 
