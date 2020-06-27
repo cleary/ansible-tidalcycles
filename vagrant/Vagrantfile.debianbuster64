@@ -63,28 +63,31 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
-  config.vm.provision "tidal", type:'ansible' do |ansible|
-    ansible.playbook = "../tidal.play.yml"
-    ansible.become = true
-  end
-  config.vm.provision "vim", type:'ansible' do |ansible|
-    ansible.playbook = "../tidal_vim.play.yml"
-    ansible.become = true
-  end
-  config.vm.provision "feedforward", type:'ansible' do |ansible|
-    ansible.playbook = "../tidal_feedforward.play.yml"
-    ansible.become = true
-  end
-  config.vm.provision "atom", type:'ansible' do |ansible|
-    ansible.playbook = "../tidal_atom.play.yml"
-    ansible.become = true
-  end
-  config.vm.provision "vscode", type:'ansible' do |ansible|
-    ansible.playbook = "../tidal_vscode.play.yml"
-    ansible.become = true
-  end
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update && apt-get install -y git ansible
+    git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git && \
+      cd ansible-tidalcycles/
+    ansible-playbook --connection=local -i localhost, tidal.play.yml
+  SHELL
+
+  # config.vm.provision "tidal", type:'ansible' do |ansible|
+  #   ansible.playbook = "../tidal.play.yml"
+  #   ansible.become = true
+  # end
+  # config.vm.provision "vim", type:'ansible' do |ansible|
+  #   ansible.playbook = "../tidal_vim.play.yml"
+  #   ansible.become = true
+  # end
+  # config.vm.provision "feedforward", type:'ansible' do |ansible|
+  #   ansible.playbook = "../tidal_feedforward.play.yml"
+  #   ansible.become = true
+  # end
+  # config.vm.provision "atom", type:'ansible' do |ansible|
+  #   ansible.playbook = "../tidal_atom.play.yml"
+  #   ansible.become = true
+  # end
+  # config.vm.provision "vscode", type:'ansible' do |ansible|
+  #   ansible.playbook = "../tidal_vscode.play.yml"
+  #   ansible.become = true
+  # end
 end

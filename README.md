@@ -7,13 +7,13 @@ Rudimentary headless Vagrant testing is now being conducted on `roles/tidal/` (g
 Passing:
  - ubuntu (and derivatives ie studio kubuntu lubuntu xubuntu etc)
    - 20.04/focal
-   - 18.04/bionic
+   - 18.04/bionic (requires newer ansible, use [this ppa](https://launchpad.net/~ansible/+archive/ubuntu/ansible))
  - debian
    - 10/buster
-   - 9/stretch
+   - 9/stretch (requires newer ansible, use [this stretch-backports version](https://packages.debian.org/stretch-backports/ansible))
  - Linux Mint
-   - 20/Ulyana
-   - 19.3/Tricia
+   - 20
+   - 19 (requires newer ansible, use [this ppa](https://launchpad.net/~ansible/+archive/ubuntu/ansible))
  
 Unsupported:
  - ubuntu 16.04/xenial (supercollider 3.6 is too old for superdirt)
