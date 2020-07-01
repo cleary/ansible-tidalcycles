@@ -1,5 +1,0 @@
----
-
-- name: upgrade all packages to latest
-  apt: 
-    upgrade: dist

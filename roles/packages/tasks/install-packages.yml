@@ -1,6 +1,0 @@
----
-
-- name: install standard packages
-  apt: name={{ item }} state=latest update_cache=yes install_recommends=yes
-  with_items: "{{ custom_package_list }}"
-    

@@ -1,4 +1,0 @@
----
-
-- include_tasks: install-packages.yml
-- include_tasks: dist-upgrade.yml
