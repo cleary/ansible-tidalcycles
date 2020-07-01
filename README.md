@@ -2,18 +2,9 @@
 ansible roles for simplifying the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal
 
 # supported distros
-Rudimentary headless Vagrant testing is now being conducted on `roles/tidal/` (github CI testing integration is on my radar)
-
-Passing:
- - ubuntu (and derivatives ie studio kubuntu lubuntu xubuntu etc)
-   - 20.04/focal
-   - 18.04/bionic
- - debian
-   - 10/buster
-   - 9/stretch
- - Linux Mint
-   - 20
-   - 19
+ - ubuntu 20.04/18.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
+ - debian 10/9
+ - Linux Mint 20/19
  
 Unsupported:
  - ubuntu 16.04/xenial (supercollider 3.6 is too old for superdirt)
