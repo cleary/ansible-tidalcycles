@@ -44,7 +44,7 @@ sudo ansible-playbook --connection=local -i localhost, tidal_feedforward.play.ym
 
 The playbooks are designed to be run and re-run, so just run them again to get latest versions of repository packages, haskell packages, git repos etc.
 
-This repo is under active development, so grabbing the latest changes is recommended (remember the `--recurse-submodules` option:
+This repo is under active development, so grabbing the latest changes is recommended (remember the `--recurse-submodules` option):
 ```
 git pull --recurse-submodules
 ```
