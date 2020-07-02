@@ -1,13 +1,13 @@
 # ansible-ise installation of tidalcycles environment(s)
 ansible roles for simplifying the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal
 
-# supported distros
+# supported
  - ubuntu 20.04/18.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
  - debian 10/9
  - Linux Mint 20/19
- 
+ - ansible >= 2.2
+
 Unsupported:
- - ubuntu 16.04/xenial (supercollider 3.6 is too old for superdirt)
  - non-debian based distros (potentially on my radar though)
  - non-linux environments 
 
