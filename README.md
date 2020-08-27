@@ -49,8 +49,10 @@ This repo is under active development, so grabbing the latest changes is recomme
 git pull --recurse-submodules
 ```
 
-The only minor gotcha is if you significantly modify any config files that are templated, eg `.vimrc`, `startup.scd`, you will need to restore the backed up version (from the install directory) after running
-
+The only minor gotcha is if you significantly modify any config files that are templated, eg `.vimrc`, `startup.scd`, or `settings.json` (vscode) you will need to restore the backed up version (from the install directory) after running - alternatively, you can *exclude* the config writing tasks via the `config` tag:
+```
+sudo ansible-playbook --connection=local -i localhost, tidal.play.yml --skip-tags "config"
+```
 
 # roles
 
@@ -61,7 +63,7 @@ This role automates the installation of SuperDirt, and SuperDirt samples in Supe
 
 If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your startup.scd and loaded on SuperCollider boot.
 
-Please note, this *will* replace any existing startup.scd, but keep a backup in the same directory, to allow merge/revert.
+Please note, this *will* replace any existing startup.scd, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-base
 
@@ -70,7 +72,7 @@ Install the vscode editor from microsoft, including useful plugins for Tidal Cyc
 
 If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your settings.json for the Sample Path Browser in the tidalcycles plugin.
 
-Please note, this *will* replace any existing settings.json, but keep a backup in the same directory, to allow merge/revert.
+Please note, this *will* replace any existing settings.json, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vscode
 
@@ -81,6 +83,8 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-at
 
 ## vim
 Install the vim-nox editor, including the tidal-vim plugin (and dependencies) for Tidal Cycles.
+
+Please note, this *will* replace any existing settings.json, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
 
@@ -98,6 +102,11 @@ Copy this file to `vars/all.yml` and modify to suit your environment.
 
 Support for various custom config attributes will be/is provided here.
 At present, (as a proof of concept) a list of paths to local Samples directories can be provided, and will be picked up and included in the startup.scd file for supercollider, and the vscode/tidalcycles extension browser
+
+It is possible to use ansible tags to *only* update the configs (eg if you add a new Sample dir to `vars/all.yml`):
+```
+sudo ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml --tags "config"
+```
 
 # vagrant
 
