@@ -1,0 +1,12 @@
+---
+- hosts: all
+
+  pre_tasks:
+    - include_vars: vars/all.yml
+      tags:
+      - config
+
+  roles:
+    - roles/tidal
+    - roles/neovim
+

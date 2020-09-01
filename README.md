@@ -34,6 +34,9 @@ sudo ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml
 # for tidalcycles + atom
 sudo ansible-playbook --connection=local -i localhost, tidal_atom.play.yml
 
+# for tidalcycles + neovim - warning, it will clobber your init.vim (but take a backup)
+sudo ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
+
 # for tidalcycles + vim - warning, it will clobber your .vimrc (but take a backup)
 sudo ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
 
@@ -81,10 +84,17 @@ Install the atom editor, including useful plugins for Tidal Cycles.
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-atom
 
+## neovim
+Install the neovim editor, including the tidal-vim plugin (sans tmux) for Tidal Cycles.
+
+Please note, this *will* replace any existing init.vim, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
+
+This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-neovim
+
 ## vim
 Install the vim-nox editor, including the tidal-vim plugin (and dependencies) for Tidal Cycles.
 
-Please note, this *will* replace any existing settings.json, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
+Please note, this *will* replace any existing .vimrc, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
 
