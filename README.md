@@ -1,4 +1,4 @@
-# ansible-ise installation of tidalcycles environment(s)
+# simplify installation of tidalcycles and editor(s) with ansible
 ansible roles for simplifying the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal
 
 # supported
