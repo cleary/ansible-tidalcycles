@@ -1,5 +1,5 @@
-# ansible-ise installation of tidalcycles environment(s)
-ansible roles for simplifying the [Tidal Cycles](https://tidalcycles.org) live coding environment install, with multiple playbooks supporting common editors used with Tidal
+# simplify installation of tidalcycles and editor(s) with ansible
+ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) live coding environment with a single command, supporting multiple editors commonly used with Tidal
 
 # supported
  - ubuntu 20.04/18.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
@@ -33,6 +33,9 @@ sudo ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml
 
 # for tidalcycles + atom
 sudo ansible-playbook --connection=local -i localhost, tidal_atom.play.yml
+
+# for tidalcycles + neovim - warning, it will clobber your init.vim (but take a backup)
+sudo ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
 
 # for tidalcycles + vim - warning, it will clobber your .vimrc (but take a backup)
 sudo ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
@@ -81,10 +84,17 @@ Install the atom editor, including useful plugins for Tidal Cycles.
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-atom
 
+## neovim
+Install the neovim editor, including the tidal-vim plugin (sans tmux) for Tidal Cycles.
+
+Please note, this *will* replace any existing init.vim, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
+
+This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-neovim
+
 ## vim
 Install the vim-nox editor, including the tidal-vim plugin (and dependencies) for Tidal Cycles.
 
-Please note, this *will* replace any existing settings.json, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
+Please note, this *will* replace any existing .vimrc, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
 

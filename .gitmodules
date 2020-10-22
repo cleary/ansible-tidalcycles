@@ -13,3 +13,6 @@
 [submodule "roles/feedforward"]
 	path = roles/feedforward
 	url = https://github.com/cleary/ansible-tidalcycles-editor-feedforward.git
+[submodule "roles/neovim"]
+	path = roles/neovim
+	url = https://github.com/cleary/ansible-tidalcycles-editor-neovim.git
