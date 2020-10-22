@@ -82,6 +82,8 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vs
 ## atom
 Install the atom editor, including useful plugins for Tidal Cycles.
 
+If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your config.cson for the Sample Browser in the tidalcycles plugin.
+
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-atom
 
 ## neovim
@@ -111,7 +113,7 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-fe
 Copy this file to `vars/all.yml` and modify to suit your environment.
 
 Support for various custom config attributes will be/is provided here.
-At present, (as a proof of concept) a list of paths to local Samples directories can be provided, and will be picked up and included in the startup.scd file for supercollider, and the vscode/tidalcycles extension browser
+At present, (as a proof of concept) a list of paths to local Samples directories can be provided, and will be picked up and included in the startup.scd file for supercollider, and the Sound Browsers in vscode/atom
 
 It is possible to use ansible tags to *only* update the configs (eg if you add a new Sample dir to `vars/all.yml`):
 ```
