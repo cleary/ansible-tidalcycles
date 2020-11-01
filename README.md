@@ -129,7 +129,6 @@ Usage:
 ```
 VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant up --provision # initialise and provision
 VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant provision      # run all provision tasks against a running box
-VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant provision      # run all provision tasks against a running box
 VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the box, to allow provision against another clean instance/different distro
 # NOTE: add the --provision-with=<role> to provision a specific role only
 ```
