@@ -25,7 +25,7 @@ cd ansible-tidalcycles/
 To apply the setup to a local machine, pick a playbook (please note they are not mutually exclusive - try them all out!):
 
 ```
-# for tidalcycles standalone - warning, it will clobber an existing startup.scd (but take a backup)
+# for tidalcycles standalone
 sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
 
 # for tidalcycles + vscode
@@ -34,10 +34,10 @@ sudo ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml
 # for tidalcycles + atom
 sudo ansible-playbook --connection=local -i localhost, tidal_atom.play.yml
 
-# for tidalcycles + neovim - warning, it will clobber your init.vim (but take a backup)
+# for tidalcycles + neovim
 sudo ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
 
-# for tidalcycles + vim - warning, it will clobber your .vimrc (but take a backup)
+# for tidalcycles + vim
 sudo ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
 
 # for tidalcycles + feedforward - warning, this is extremely, extremely experimental
