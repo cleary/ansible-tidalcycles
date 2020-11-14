@@ -25,7 +25,7 @@ cd ansible-tidalcycles/
 To apply the setup to a local machine, pick a playbook (please note they are not mutually exclusive - try them all out!):
 
 ```
-# for tidalcycles standalone - warning, it will clobber an existing startup.scd (but take a backup)
+# for tidalcycles standalone
 sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
 
 # for tidalcycles + vscode
@@ -34,10 +34,10 @@ sudo ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml
 # for tidalcycles + atom
 sudo ansible-playbook --connection=local -i localhost, tidal_atom.play.yml
 
-# for tidalcycles + neovim - warning, it will clobber your init.vim (but take a backup)
+# for tidalcycles + neovim
 sudo ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
 
-# for tidalcycles + vim - warning, it will clobber your .vimrc (but take a backup)
+# for tidalcycles + vim
 sudo ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
 
 # for tidalcycles + feedforward - warning, this is extremely, extremely experimental
@@ -73,7 +73,7 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-base
 ## vscode
 Install the vscode editor from microsoft, including useful plugins for Tidal Cycles and Haskell.
 
-If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your settings.json for the Sample Path Browser in the tidalcycles plugin.
+If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your settings.json for the Sound Browser in the tidalcycles plugin.
 
 Please note, this *will* replace any existing settings.json, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
 
@@ -82,7 +82,7 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vs
 ## atom
 Install the atom editor, including useful plugins for Tidal Cycles.
 
-If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your config.cson for the Sample Browser in the tidalcycles plugin.
+If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your config.cson for the Sound Browser in the tidalcycles plugin.
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-atom
 
@@ -109,9 +109,7 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-fe
 
 # vars
 
-## all.yml.example
-Copy this file to `vars/all.yml` and modify to suit your environment.
-
+## all.yml
 Support for various custom config attributes will be/is provided here.
 At present, (as a proof of concept) a list of paths to local Samples directories can be provided, and will be picked up and included in the startup.scd file for supercollider, and the Sound Browsers in vscode/atom
 
