@@ -2,6 +2,10 @@
 #  loaded in:
 #   - supercollider startup.scd
 #   - vscode/tidalcycles extension sample browser
-#
+
 #custom_sample_paths: [ "/home/user/foo/",
 #                       "/home/user/bar/" ]
+
+custom_sample_gits:   [ "https://github.com/dktr0/estuary-samples.git",
+                       "https://github.com/dktr0/supercontinent.git",
+                       "https://github.com/dktr0/cybernetic-samples.git" ]

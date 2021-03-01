@@ -1,0 +1,26 @@
+---
+
+- name: create list of local paths for git clones
+  set_fact:
+    git_list: "{{ default([]) + [ /home/{{ ansible_env.SUDO_USER }}/Music/tidal_samples_ansible/{{ item | basename | splitext | first }} ] }}"
+  with_items: "{{ custom_sample_gits }}"
+
+- name: "clone samples from git repos to /home/{{ ansible_env.SUDO_USER }}/Music/tidal_samples_ansible"
+  git:
+    repo: "{{ item }}"
+    dest: "/home/{{ ansible_env.SUDO_USER }}/Music/tidal_samples_ansible/{{ item | basename | splitext | first }}"
+  with_items: "{{ custom_sample_gits }}"
+  become: yes
+  become_method: su
+  become_user: "{{ansible_env.SUDO_USER}}"
+  become_flags: '-s /bin/bash'
+  when: custom_sample_gits is defined
+
+- name: add git cloned sample paths to our list of local samples
+  set_fact:
+    git_list: "{{ custom_sample_paths|default([]) + [ /home/{{ ansible_env.SUDO_USER }}/Music/tidal_samples_ansible/{{ item | basename | splitext | first }} ] }}"
+  with_items: "{{ custom_sample_gits }}"
+
+- debug: 
+    msg: "{{ git_list }}"
+    
