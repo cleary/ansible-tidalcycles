@@ -5,3 +5,12 @@
 #
 #custom_sample_paths: [ "/home/user/foo/",
 #                       "/home/user/bar/" ]
+
+# modify common supercollider startup.scd defaults
+# for complete list of available defaults check:
+#   roles/tidal/defaults/main.yml
+#   roles/tidal/templates/startup.scd.template
+#
+# uncomment to modify the number of supercollider outputs (hardware/DAW etc)
+# note: superdirt orbit assignment is auto-calculated, ref https://tidalcycles.org/Separate_audio_outputs 
+# sc_option_numOutputBusChannels: 2
