@@ -27,7 +27,3 @@
 #custom_midi_clients:
 #    - { livecode_name: midi0, full_name: Midi Through, port_name: Midi Through Port-0, latency: 0 }
 #    - { livecode_name: midi1, full_name: Focusrite USB MIDI, port_name: Focusrite USB MIDI }
-
-custom_sample_gits:   [ "https://github.com/dktr0/estuary-samples.git",
-                       "https://github.com/dktr0/supercontinent.git",
-                       "https://github.com/dktr0/cybernetic-samples.git" ]
