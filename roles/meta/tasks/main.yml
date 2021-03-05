@@ -1,26 +1,54 @@
 ---
 
-- name: create list of local paths for git clones
-  set_fact:
-    git_list: "{{ default([]) + [ /home/{{ ansible_env.SUDO_USER }}/Music/tidal_samples_ansible/{{ item | basename | splitext | first }} ] }}"
-  with_items: "{{ custom_sample_gits }}"
+- block:
+  - set_fact:
+      short_name_list: "{{ short_name_list|default([]) + [ item | basename | splitext | first ] }}"
+    with_items: "{{ git_sample_sets }}"
 
-- name: "clone samples from git repos to /home/{{ ansible_env.SUDO_USER }}/Music/tidal_samples_ansible"
-  git:
-    repo: "{{ item }}"
-    dest: "/home/{{ ansible_env.SUDO_USER }}/Music/tidal_samples_ansible/{{ item | basename | splitext | first }}"
-  with_items: "{{ custom_sample_gits }}"
+  - name: "clone sample sets from git repos into {{ git_sample_sets_dir }}"
+    git:
+      repo: "{{ item }}"
+      dest: "{{ git_sample_sets_dir }}/{{ item | basename | splitext | first }}"
+    with_items: "{{ git_sample_sets }}"
+
+  - name: append sample paths to our custom_sample_paths list
+    set_fact:
+        custom_sample_paths: "{{ custom_sample_paths|default([]) + [ git_sample_sets_dir + '/' + item ] }}"
+    with_items: "{{ short_name_list }}"
+
+  - debug:
+      msg: "{{ custom_sample_paths }}"
+
   become: yes
   become_method: su
   become_user: "{{ansible_env.SUDO_USER}}"
   become_flags: '-s /bin/bash'
-  when: custom_sample_gits is defined
+  when: git_sample_sets is defined
 
-- name: add git cloned sample paths to our list of local samples
-  set_fact:
-    git_list: "{{ custom_sample_paths|default([]) + [ /home/{{ ansible_env.SUDO_USER }}/Music/tidal_samples_ansible/{{ item | basename | splitext | first }} ] }}"
-  with_items: "{{ custom_sample_gits }}"
+- block:
+  - name: make sure our dir for individual samples exists
+    file:
+      path: "{{ git_sample_individual_dir }}"
+      state: directory
+      mode: 0755
 
-- debug: 
-    msg: "{{ git_list }}"
-    
+  - name: "clone individual samples from git repos into {{ git_sample_individual_dir }}"
+    git:
+      repo: "{{ item.git_url }}"
+      dest: "{{ git_sample_individual_dir }}/{{ item.livecode_name }}"
+    with_items: "{{ git_sample_individuals }}"
+
+  - name: append sample paths to our custom_sample_paths list
+    set_fact:
+      custom_sample_paths: "{{ custom_sample_paths|default([]) + [ git_sample_individual_dir ] }}"
+
+  - debug:
+      msg: "{{ custom_sample_paths }}"
+
+  become: yes
+  become_method: su
+  become_user: "{{ansible_env.SUDO_USER}}"
+  become_flags: '-s /bin/bash'
+  when: git_sample_individuals is defined
+
+
