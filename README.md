@@ -52,7 +52,7 @@ This repo is under active development, so grabbing the latest changes is recomme
 git pull --recurse-submodules
 ```
 
-The only minor gotcha is if you significantly modify any config files that are templated, eg `.vimrc`, `startup.scd`, or `settings.json` (vscode) you will need to restore the backed up version (from the install directory) after running - alternatively, you can *exclude* the config writing tasks via the `config` tag:
+The only minor gotcha is if you significantly modify any config files that are templated, eg `.vimrc`, `startup.scd` (please see `vars/all.yml` below), or `settings.json` (vscode) you will need to restore the backed up version (from the install directory) after running - alternatively, you can *exclude* the config writing tasks via the `config` tag:
 ```
 sudo ansible-playbook --connection=local -i localhost, tidal.play.yml --skip-tags "config"
 ```
@@ -111,7 +111,7 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-fe
 
 ## all.yml
 Support for various custom config attributes is provided here. The options are documented in the file, as a summary:
- - add a list of paths to local Samples directories, which will be picked up and included in the startup.scd file for supercollider, and the Sound Browsers in vscode/atom
+ - add a list of paths to local Samples directories, which will be picked up and included in the `startup.scd` file for supercollider, and the Sound Browsers in vscode/atom
  - `startup.scd` defaults can be modified here, including `sc.numOutputBusChannels` commonly used for splitting audio outputs to a DAW
  - MIDI clients can be defined with a simple syntax, which then generates the needed entries in `startup.scd`
 
