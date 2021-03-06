@@ -135,9 +135,12 @@ VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the
 ```
 
 # todo
-* try and use docker instead of full vm, should enable simpler CI workflow
 * add custom synthdefs to vars
-* add midi defs to vars
+* add midi input defs to vars
+* create role for building/installing mutable ugens
+* sc load more file extensions
+* sc change recordings dir
+* investigate custom quarks
 
 # notes to self:
 * `git submodule update --remote [--merge]`
