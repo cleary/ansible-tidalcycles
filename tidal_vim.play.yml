@@ -14,5 +14,6 @@
       - config
 
   roles:
+    - roles/meta
     - roles/tidal
     - roles/vim

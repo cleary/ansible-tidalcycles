@@ -2,9 +2,26 @@
 #  loaded in:
 #   - supercollider startup.scd
 #   - vscode/tidalcycles extension sample browser
-#
+
 #custom_sample_paths: [ "/home/user/foo/",
 #                       "/home/user/bar/" ]
+
+# source samples from git repositories
+# Individual samples keep the audio files in the top directory of the repository
+#git_sample_individuals: 
+#    - { livecode_name: flbass, git_url: "https://github.com/cleary/samples-flbass.git" }
+#    - { livecode_name: h2drums, git_url: "https://github.com/cleary/samples-hydrogen-drums.git" }
+#    - { livecode_name: uku, git_url: "https://github.com/thgrund/samples-ukulele.git" }
+#    - { livecode_name: eride, git_url: "https://github.com/abalone1969/eRide.git" }
+#    - { livecode_name: ebongos, git_url: "https://github.com/abalone1969/ebongos.git" }
+
+# Sample sets have the audio files contained in multiple subdirs of the repository
+#git_sample_sets: 
+#    - https://github.com/yaxu/dirt-jv1080.git
+#    - https://github.com/yaxu/dirt-impulse.git
+#    - https://github.com/dktr0/estuary-samples.git
+#    - https://github.com/dktr0/supercontinent.git
+#    - https://github.com/dktr0/cybernetic-samples.git
 
 # modify common supercollider startup.scd defaults
 # for complete list of available defaults check:

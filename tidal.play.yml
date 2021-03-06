@@ -13,5 +13,6 @@
       tags:
       - config
 
-        #  roles:
-      #    - roles/tidal
+  roles:
+    - roles/meta
+    - roles/tidal
