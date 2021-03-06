@@ -1,0 +1,4 @@
+---
+
+git_sample_individual_dir: "/home/{{ansible_env.SUDO_USER}}/.local/share/ansible-tidalcycles/git_sample_individual_dir"
+git_sample_sets_dir: "/home/{{ansible_env.SUDO_USER}}/.local/share/ansible-tidalcycles/git_sample_sets_dir"
