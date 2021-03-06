@@ -2,9 +2,16 @@
 - hosts: all
 
   pre_tasks:
-    - include_vars: vars/all.yml
+    - stat:
+        path: vars/all.yml
+      register: vars_all
       tags:
       - config
 
-  roles:
-    - roles/tidal
+    - include_vars: vars/all.yml
+      when: vars_all.stat.exists
+      tags:
+      - config
+
+        #  roles:
+      #    - roles/tidal
