@@ -47,7 +47,8 @@
 #    - { livecode_name: midi0, full_name: Midi Through, port_name: Midi Through Port-0, latency: 0 }
 #    - { livecode_name: midi1, full_name: Focusrite USB MIDI, port_name: Focusrite USB MIDI }
 #
-# install and configure various ugens
+# install and configure various ugens, currently supported:
+#  * mutable-instruments (ref https://github.com/v7b1/mi-UGens)
 #sc_ugens: [ 
-#            #"mutable-instruments"
+#            "mutable-instruments"
 #          ]
