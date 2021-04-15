@@ -109,12 +109,13 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-fe
 
 # vars
 
-## all.yml
-Support for various custom config attributes can be provided here. The options are documented in `all.yml.ex`, as a summary:
+## all.yml.ex
+Support for various custom config attributes can be provided by copying this file to `vars/all.yml` and uncommenting. A summary of options:
  - add a list of paths to local Samples directories, which will be picked up and included in the `startup.scd` file for supercollider, and the Sound Browsers in vscode/atom
  - source sample sets/directories from git repositories (curated examples provided)
  - `startup.scd` defaults can be modified here, including `sc.numOutputBusChannels` commonly used for splitting audio outputs to a DAW
  - MIDI clients can be defined with a simple syntax, which then generates the needed entries in `startup.scd`
+ - supercollider ugens can be installed (currently only supporting [mutable-instruments](https://github.com/v7b1/mi-UGens), superdirt synthdefs are automatically configured, and parameters auto-loaded in all editors
 
 It is possible to use ansible tags to *only* update the configs (eg if you add a new Sample dir to `vars/all.yml`):
 ```
