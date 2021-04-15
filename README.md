@@ -115,7 +115,7 @@ Support for various custom config attributes can be provided by copying this fil
  - source sample sets/directories from git repositories (curated examples provided)
  - `startup.scd` defaults can be modified here, including `sc.numOutputBusChannels` commonly used for splitting audio outputs to a DAW
  - MIDI clients can be defined with a simple syntax, which then generates the needed entries in `startup.scd`
- - supercollider ugens can be installed (currently only supporting [mutable-instruments](https://github.com/v7b1/mi-UGens), superdirt synthdefs are automatically configured, and parameters auto-loaded in all editors
+ - supercollider ugens can be installed (currently only supporting [mutable-instruments](https://github.com/v7b1/mi-UGens), [superdirt synthdefs](https://raw.githubusercontent.com/cleary/ansible-tidalcycles/master/files/mutable-instruments-synthdefs.scd) are automatically configured, and [parameters](https://raw.githubusercontent.com/cleary/ansible-tidalcycles/master/files/mutable-instruments-ugens_parameters.hs) auto-loaded in all editors
 
 It is possible to use ansible tags to *only* update the configs (eg if you add a new Sample dir to `vars/all.yml`):
 ```
