@@ -52,6 +52,5 @@
 
 # install and configure various ugens, currently supported:
 #  * mutable-instruments (ref https://github.com/v7b1/mi-UGens)
-#sc_ugens: [ 
-#            "mutable-instruments"
-#          ]
+#sc_ugens: 
+#    - "mutable-instruments"
