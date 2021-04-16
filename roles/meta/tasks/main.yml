@@ -16,9 +16,6 @@
         custom_sample_paths: "{{ custom_sample_paths|default([]) + [ git_sample_sets_dir + '/' + item ] }}"
     with_items: "{{ short_name_list }}"
 
-  - debug:
-      msg: "{{ custom_sample_paths }}"
-
   become: yes
   become_method: su
   become_user: "{{ansible_env.SUDO_USER}}"
@@ -41,9 +38,6 @@
   - name: append sample paths to our custom_sample_paths list
     set_fact:
       custom_sample_paths: "{{ custom_sample_paths|default([]) + [ git_sample_individual_dir ] }}"
-
-  - debug:
-      msg: "{{ custom_sample_paths }}"
 
   become: yes
   become_method: su
