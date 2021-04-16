@@ -3,11 +3,11 @@
 
 # list of samples paths
 #  loaded in:
-#   - supercollider startup.scd
-#   - vscode/tidalcycles extension sample browser
-
-#custom_sample_paths: [ "/home/user/foo/",
-#                       "/home/user/bar/" ]
+#   * supercollider startup.scd
+#   * vscode/tidalcycles extension sample browser
+#custom_sample_paths:
+#   - "/home/user/foo/"
+#   - "/home/user/bar/"
 
 # source samples from git repositories
 # Individual samples keep the audio files in the top directory of the repository
