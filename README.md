@@ -18,7 +18,13 @@ Unsupported:
 This repository uses git-submodules for roles, so the following clone command is required:
 
 ```
+# for debian/ubuntu/derivatives
 sudo apt install ansible git
+
+# for arch/manjaro/derivatives
+sudo pacman -S ansible git
+
+# for all distros
 git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
 cd ansible-tidalcycles/
 ```
