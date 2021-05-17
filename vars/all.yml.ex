@@ -4,7 +4,7 @@
 # list of samples paths
 #  loaded in:
 #   * supercollider startup.scd
-#   * vscode/tidalcycles extension sample browser
+#   * vscode/atom tidalcycles extension sample browser
 #custom_sample_paths:
 #   - "/home/user/foo/"
 #   - "/home/user/bar/"
