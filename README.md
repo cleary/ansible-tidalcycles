@@ -1,3 +1,9 @@
+# ORPHANED Arch Support Branch
+
+It is unfortunately not possible to support arch when it will allow packaging installation without adequately specifying dependencies (yes, you can cleanly install a package via `pacman` then have it fail to start because of missing dependencies)
+
+Leaving this here in case anyone else wishes to try and take on the support.
+
 # simplify installation of tidalcycles and editor(s) with ansible
 ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) live coding environment with a single command, supporting multiple editors commonly used with Tidal
 
