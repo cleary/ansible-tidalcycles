@@ -5,11 +5,11 @@ ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) liv
  - ubuntu 20.04/18.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
  - debian 10/9
  - Linux Mint 20/19
- - Archlinux/Manjaro (currently, tidal, neovim, vim roles only)
  - ansible >= 2.2
 
 Unsupported:
  - non-linux environments 
+ - Archlinux/Manjaro (some attempts were made, please check the [arch_support branch](https://github.com/cleary/ansible-tidalcycles/tree/arch_support))
 
 # usage:
 
@@ -18,13 +18,7 @@ Unsupported:
 This repository uses git-submodules for roles, so the following clone command is required:
 
 ```
-# for debian/ubuntu/derivatives
 sudo apt install ansible git
-
-# for arch/manjaro/derivatives
-sudo pacman -S ansible git
-
-# for all distros
 git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
 cd ansible-tidalcycles/
 ```
