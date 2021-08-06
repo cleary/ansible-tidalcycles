@@ -136,6 +136,9 @@ VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the
 ```
 
 # todo
+* break ugens install into separate task file
+* add vars for loading custom .hs files to boottidal.hs
+* add vars for loading custom .scd files to startup.scd
 * add custom synthdefs to vars
 * sc load more file extensions
 * sc change recordings dir
