@@ -136,6 +136,7 @@ VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the
 ```
 
 # todo
+* debian 11 requirements, `cabal v1-install`
 * break ugens install into separate task file
 * add vars for loading custom .hs files to boottidal.hs
 * add vars for loading custom .scd files to startup.scd
