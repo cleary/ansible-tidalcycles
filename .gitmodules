@@ -16,3 +16,6 @@
 [submodule "roles/neovim"]
 	path = roles/neovim
 	url = https://github.com/cleary/ansible-tidalcycles-editor-neovim.git
+[submodule "roles/ugens-mi"]
+	path = roles/ugens-mi
+	url = https://github.com/cleary/ansible-tidalcycles-synth-mi-ugens.git
