@@ -65,12 +65,12 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
 
   # execute ansible on guest directly, most accurate for end user usage replication
-  #config.vm.provision "tidal", type:'shell', inline: <<-SHELL
-  #  apt-get update && apt-get install -y git ansible
-  #  [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
-  #  cd ansible-tidalcycles/
-  #  ansible-playbook --connection=local -i localhost, tidal.play.yml
-  #SHELL
+  config.vm.provision "tidal", type:'shell', inline: <<-SHELL
+    apt-get update && apt-get install -y git ansible
+    [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
+    cd ansible-tidalcycles/
+    ansible-playbook --connection=local -i localhost, tidal.play.yml
+  SHELL
 
   config.vm.provision "atom", type:'shell', inline: <<-SHELL
     apt-get update && apt-get install -y git ansible
@@ -79,33 +79,33 @@ Vagrant.configure("2") do |config|
     ansible-playbook --connection=local -i localhost, tidal_atom.play.yml
   SHELL
 
-  #config.vm.provision "feedforward", type:'shell', inline: <<-SHELL
-  #  apt-get update && apt-get install -y git ansible
-  #  [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
-  #  cd ansible-tidalcycles/
-  #  ansible-playbook --connection=local -i localhost, tidal_feedforward.play.yml
-  #SHELL
+  config.vm.provision "feedforward", type:'shell', inline: <<-SHELL
+    apt-get update && apt-get install -y git ansible
+    [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
+    cd ansible-tidalcycles/
+    ansible-playbook --connection=local -i localhost, tidal_feedforward.play.yml
+  SHELL
 
-  #config.vm.provision "neovim", type:'shell', inline: <<-SHELL
-  #  apt-get update && apt-get install -y git ansible
-  #  [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
-  #  cd ansible-tidalcycles/
-  #  ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
-  #SHELL
+  config.vm.provision "neovim", type:'shell', inline: <<-SHELL
+    apt-get update && apt-get install -y git ansible
+    [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
+    cd ansible-tidalcycles/
+    ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
+  SHELL
 
-  #config.vm.provision "vim", type:'shell', inline: <<-SHELL
-  #  apt-get update && apt-get install -y git ansible
-  #  [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
-  #  cd ansible-tidalcycles/
-  #  ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
-  #SHELL
+  config.vm.provision "vim", type:'shell', inline: <<-SHELL
+    apt-get update && apt-get install -y git ansible
+    [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
+    cd ansible-tidalcycles/
+    ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
+  SHELL
 
-  #config.vm.provision "vscode", type:'shell', inline: <<-SHELL
-  #  apt-get update && apt-get install -y git ansible
-  #  [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
-  #  cd ansible-tidalcycles/
-  #  ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml
-  #SHELL
+  config.vm.provision "vscode", type:'shell', inline: <<-SHELL
+    apt-get update && apt-get install -y git ansible
+    [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
+    cd ansible-tidalcycles/
+    ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml
+  SHELL
 
   # running from host ansible, not accurate to end user experience
   # config.vm.provision "tidal", type:'ansible' do |ansible|
