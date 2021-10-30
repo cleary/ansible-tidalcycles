@@ -3,7 +3,7 @@ ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) liv
 
 # supported
  - ubuntu 20.04/18.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
- - debian 10/9
+ - debian 11/10
  - Linux Mint 20/19
  - ansible >= 2.2
 

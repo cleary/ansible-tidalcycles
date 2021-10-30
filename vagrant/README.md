@@ -5,15 +5,8 @@ sudo apt-get install virtualbox-qt libvirt-daemon libvirt-daemon-driver-vbox
 
 ## running a single container
 ```
-VAGRANT_VAGRANTFILE=Vagrantfile.ubuntufocal64 vagrant up --provision
-VAGRANT_VAGRANTFILE=./Vagrantfile.debianstretch64 vagrant destroy
-```
-
-## running all the containers
-```
-find ./ -iname "Vagrantfile\.*" | while read line; do 
-  VAGRANT_VAGRANTFILE=${line} vagrant up --provision; 
-done
+VAGRANT_VAGRANTFILE=Vagrantfile.ubuntu2004_64 vagrant up --provision
+VAGRANT_VAGRANTFILE=./Vagrantfile.ubuntu2004_64 vagrant destroy
 ```
 
 # todo
