@@ -1,5 +1,7 @@
 # simplify installation of tidalcycles and editor(s) with ansible
-ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) live coding environment with a single command, supporting multiple editors commonly used with Tidal
+ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) live coding environment with a single command, supporting multiple editors commonly used with Tidal.
+
+Common Tidal-related modifications to the SuperCollider `startup.scd` are also supported, see `vars/all.yml` below  
 
 # supported
  - ubuntu 20.04/18.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
@@ -115,7 +117,7 @@ Support for various custom config attributes can be provided by copying this fil
  - source sample sets/directories from git repositories (curated examples provided)
  - `startup.scd` defaults can be modified here, including `sc.numOutputBusChannels` commonly used for splitting audio outputs to a DAW
  - MIDI clients can be defined with a simple syntax, which then generates the needed entries in `startup.scd`
- - supercollider ugens can be installed (currently only supporting [mutable-instruments](https://github.com/v7b1/mi-UGens), [superdirt synthdefs](https://raw.githubusercontent.com/cleary/ansible-tidalcycles/master/files/mutable-instruments-synthdefs.scd) are automatically configured, and [parameters](https://raw.githubusercontent.com/cleary/ansible-tidalcycles/master/files/mutable-instruments-ugens_parameters.hs) auto-loaded in all editors
+ - supercollider ugens can be installed (currently only supporting [mutable-instruments](https://github.com/v7b1/mi-UGens), [superdirt synthdefs](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/96a2915c966f7a9f060db5b9cfc2a15d01bb5089/templates/mutable-instruments-synthdefs.scd.template) are automatically configured, and [parameters](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/96a2915c966f7a9f060db5b9cfc2a15d01bb5089/templates/mutable-instruments-ugens_parameters.hs.template) auto-loaded in all editors
 
 It is possible to use ansible tags to *only* update the configs (eg if you add a new Sample dir to `vars/all.yml`):
 ```
