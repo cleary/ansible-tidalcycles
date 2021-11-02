@@ -109,6 +109,14 @@ Make sure to check out his [README](https://github.com/yaxu/feedforward/blob/mas
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-feedforward
 
+## ugens-mutable-instruments
+Install the open source [Mutable Instruments](https://mutable-instruments.net/) [Ugens for SuperCollider](https://github.com/v7b1/mi-UGens), configures autoloading required parameter mappings in all editors
+
+ - For available Synths, have a look at the [SynthDef](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/96a2915c966f7a9f060db5b9cfc2a15d01bb5089/templates/mutable-instruments-synthdefs.scd.template)
+ - For available options and effects, check out the [parameters.hs](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/96a2915c966f7a9f060db5b9cfc2a15d01bb5089/templates/mutable-instruments-ugens_parameters.hs.template)
+
+This is a git submodule: https://github.com/cleary/ansible-tidalcycles-synth-mi-ugens
+
 # vars
 
 ## all.yml.ex
@@ -117,7 +125,6 @@ Support for various custom config attributes can be provided by copying this fil
  - source sample sets/directories from git repositories (curated examples provided)
  - `startup.scd` defaults can be modified here, including `sc.numOutputBusChannels` commonly used for splitting audio outputs to a DAW
  - MIDI clients can be defined with a simple syntax, which then generates the needed entries in `startup.scd`
- - supercollider ugens can be installed (currently only supporting [mutable-instruments](https://github.com/v7b1/mi-UGens), [superdirt synthdefs](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/96a2915c966f7a9f060db5b9cfc2a15d01bb5089/templates/mutable-instruments-synthdefs.scd.template) are automatically configured, and [parameters](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/96a2915c966f7a9f060db5b9cfc2a15d01bb5089/templates/mutable-instruments-ugens_parameters.hs.template) auto-loaded in all editors
 
 It is possible to use ansible tags to *only* update the configs (eg if you add a new Sample dir to `vars/all.yml`):
 ```
