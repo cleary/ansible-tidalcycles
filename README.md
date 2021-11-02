@@ -110,7 +110,13 @@ Make sure to check out his [README](https://github.com/yaxu/feedforward/blob/mas
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-feedforward
 
 ## ugens-mutable-instruments
-Install the open source [Mutable Instruments](https://mutable-instruments.net/) [Ugens for SuperCollider](https://github.com/v7b1/mi-UGens), configures autoloading required parameter mappings in all editors
+Install the open source [Mutable Instruments](https://mutable-instruments.net/) [Ugens for SuperCollider](https://github.com/v7b1/mi-UGens), configures autoloading required parameter mappings in all editors.
+
+To enable, create/edit `vars/all.yml` (see `vars/all.yml.ex` for examples), and uncomment the lines:
+```
+sc_ugens: 
+    - "mutable-instruments"
+```
 
  - For available Synths, have a look at the [SynthDef](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/master/templates/mutable-instruments-synthdefs.scd.template)
  - For available options and effects, check out the [parameters.hs](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/master/templates/mutable-instruments-ugens_parameters.hs.template)
