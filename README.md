@@ -134,7 +134,7 @@ sudo ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml --t
 # vagrant
 
 ## Vagrantfile.*
-Vagrant config files for our supported distros. Provisions each of the playbooks against a vagrant box (virtualbox provider) running the specified distro. 
+Vagrant config files for testing our supported distros. Provisions each of the playbooks against a vagrant box (virtualbox provider) running the specified distro. 
 
 Usage:
 ```
@@ -146,7 +146,6 @@ VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the
 
 # todo
 * debian 11 requirements, `cabal v1-install`
-* break ugens install into separate task file
 * add vars for loading custom .hs files to boottidal.hs
 * add vars for loading custom .scd files to startup.scd
 * add custom synthdefs to vars
@@ -155,4 +154,5 @@ VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the
 * investigate custom quarks
 
 # notes to self:
+* `git pull --recurse-submodules`
 * `git submodule update --remote [--merge]`
