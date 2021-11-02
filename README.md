@@ -112,8 +112,8 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-fe
 ## ugens-mutable-instruments
 Install the open source [Mutable Instruments](https://mutable-instruments.net/) [Ugens for SuperCollider](https://github.com/v7b1/mi-UGens), configures autoloading required parameter mappings in all editors
 
- - For available Synths, have a look at the [SynthDef](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/96a2915c966f7a9f060db5b9cfc2a15d01bb5089/templates/mutable-instruments-synthdefs.scd.template)
- - For available options and effects, check out the [parameters.hs](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/96a2915c966f7a9f060db5b9cfc2a15d01bb5089/templates/mutable-instruments-ugens_parameters.hs.template)
+ - For available Synths, have a look at the [SynthDef](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/master/templates/mutable-instruments-synthdefs.scd.template)
+ - For available options and effects, check out the [parameters.hs](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/master/templates/mutable-instruments-ugens_parameters.hs.template)
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-synth-mi-ugens
 
@@ -145,7 +145,7 @@ VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the
 ```
 
 # todo
-* debian 11 requirements, `cabal v1-install`
+* feedforward failing to build on debian 11
 * add vars for loading custom .hs files to boottidal.hs
 * add vars for loading custom .scd files to startup.scd
 * add custom synthdefs to vars
