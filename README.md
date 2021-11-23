@@ -151,6 +151,7 @@ VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the
 ```
 
 # todo
+* investigate `$ QT_QPA_PLATFORM=offscreen sclang` for starting sc instead of virt display
 * feedforward failing to build on debian 11
 * add vars for loading custom .hs files to boottidal.hs
 * add vars for loading custom .scd files to startup.scd
