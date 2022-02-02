@@ -15,5 +15,5 @@
 
   roles:
     - roles/meta
-      #- roles/tidal
+    - roles/tidal
     - roles/vim
