@@ -64,7 +64,7 @@ sudo ansible-playbook --connection=local -i localhost, tidal.play.yml --skip-tag
 ## tidal
 Install Tidal Cycles (http://tidalcycles.org) and dependencies (SuperCollider, haskell, SuperDirt, SuperDirt-samples etc). 
 
-This role automates the installation of SuperDirt, and SuperDirt samples in SuperCollider as per [this guide](https://tidalcycles.org/index.php/Start_tidalcycles_and_superdirt_for_the_first_time). It also writes a basic startup.scd as per [this recommendation](https://github.com/musikinformatik/SuperDirt/blob/develop/superdirt_startup.scd).
+This role automates the installation of SuperDirt, and SuperDirt samples in SuperCollider. It also writes a basic startup.scd as per [this recommendation](https://github.com/musikinformatik/SuperDirt/blob/develop/superdirt_startup.scd).
 
 If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your startup.scd and loaded on SuperCollider boot.
 
