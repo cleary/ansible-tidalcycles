@@ -4,7 +4,7 @@ ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) liv
 Common Tidal-related modifications to the SuperCollider `startup.scd` are also supported, see `vars/all.yml` below  
 
 # supported
- - ubuntu 20.04/18.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
+ - ubuntu 22.04/20.04/18.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
  - debian 11/10
  - Linux Mint 20/19
  - ansible >= 2.2
@@ -103,7 +103,11 @@ Please note, this *will* replace any existing .vimrc, but keep a backup in the s
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
 
 ## feedforward
-Install the **experimental** [feedforward editor](https://github.com/yaxu/feedforward) by [@yaxu](https://github.com/yaxu), VU meter config is automatically included in the startup.scd, and a binary symlink is dropped at `/usr/local/bin/feedforward`
+Install the **experimental** [feedforward editor](https://github.com/yaxu/feedforward) by [@yaxu](https://github.com/yaxu).
+
+**Note: Currently failing on Ubuntu 22.04/jammy and debian 11/bullseye**
+
+VU meter config is automatically included in the startup.scd, and a binary symlink is dropped at `/usr/local/bin/feedforward`
 
 Make sure to check out his [README](https://github.com/yaxu/feedforward/blob/master/README.md), there are lots of gotchas!
 
@@ -152,7 +156,7 @@ VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the
 
 # todo
 * investigate `$ QT_QPA_PLATFORM=offscreen sclang` for starting sc instead of virt display
-* feedforward failing to build on debian 11
+* feedforward failing to build on debian 11, ubuntu 22.04
 * add vars for loading custom .hs files to boottidal.hs
 * add vars for loading custom .scd files to startup.scd
 * add custom synthdefs to vars
