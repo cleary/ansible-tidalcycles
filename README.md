@@ -9,7 +9,7 @@ Common Tidal-related modifications to the SuperCollider `startup.scd` are also s
  - Linux Mint 20/19
  - ansible >= 2.2
 
-# probably also works
+## probably also works
  - any other debian based distribution
 
 Unsupported:
