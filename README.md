@@ -74,6 +74,8 @@ If you provide a list of samples paths via the variable *custom_sample_paths* in
 
 Please note, this *will* replace any existing startup.scd, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
 
+It will also check for a newer version of `sclang` (eg if installed from source) and skip package installation if a newer version is found
+
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-base
 
 ## vscode
