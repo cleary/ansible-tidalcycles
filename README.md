@@ -166,6 +166,7 @@ VAGRANT_VAGRANTFILE=Vagrantfile.<distro> vagrant destroy        # get rid of the
 * add vars for loading custom .hs files to boottidal.hs
 * add vars for loading custom .scd files to startup.scd
 * add custom synthdefs to vars
+* piv4 support `cabal install tidal --lib --ghc-options=-opta-march=armv8.4a` ref jarm@discord
 * sc load more file extensions
 * sc change recordings dir
 * investigate custom quarks
