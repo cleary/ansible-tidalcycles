@@ -37,9 +37,6 @@
 # note: superdirt orbit assignment is auto-calculated, ref https://tidalcycles.org/Separate_audio_outputs 
 # sc_option_numOutputBusChannels: 2
 
-# connect midi clients to send control input *to tidal"
-# midi_input: true
-
 # connect midi client(s) to send patterns *from tidal* (hardware, software synths/plugins etc)
 # see: https://tidalcycles.org/SuperDirt_MIDI_Tutorial
 # In SuperCollider get the output of:
