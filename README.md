@@ -4,18 +4,19 @@ ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) liv
 Common Tidal-related modifications to the SuperCollider `startup.scd` are also supported, see `vars/all.yml` below  
 
 # supported
- - ubuntu 22.04/20.04/18.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
+ - ubuntu 22.04/20.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
  - debian 11/10
- - Linux Mint 20/19
+ - Linux Mint 20
  - ansible >= 2.2
 
 ## probably also works
  - any other debian based distribution
 
 Unsupported:
- - non-linux environments 
+ - non-linux environments
  - Archlinux/Manjaro (some attempts were made, please check the [arch_support branch](https://github.com/cleary/ansible-tidalcycles/tree/arch_support))
  - other non-debian based linux distributions (patches welcome!)
+ - Ubuntu 18.04/Mint 19 `cabal install` now fails
 
 # usage:
 
