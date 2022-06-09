@@ -155,6 +155,7 @@ Vagrant config files for testing our supported distros. Provisions each of the p
 See vagrant/README.md for usage
 
 # todo
+* emacs role: ref https://discord.com/channels/791359191486300172/791359191486300175/984311129515901008
 * investigate `$ QT_QPA_PLATFORM=offscreen sclang` for starting sc instead of virt display
 * feedforward failing to build on debian 11, ubuntu 22.04
 * add vars for loading custom .hs files to boottidal.hs
