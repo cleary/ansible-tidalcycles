@@ -4,7 +4,7 @@ Vagrant config files for testing our supported distros. Provisions each of the p
 
 ## package deps
 ```
-sudo apt-get install virtualbox-qt libvirt-daemon libvirt-daemon-driver-vbox
+sudo apt-get install vagrant virtualbox-qt libvirt-daemon libvirt-daemon-driver-vbox
 ```
 
 ## running a single container
