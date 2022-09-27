@@ -1,6 +1,9 @@
 # simplify installation of tidalcycles and editor(s) with ansible
 ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) live coding environment with a single command, supporting multiple editors commonly used with Tidal.
 
+## NOTE: if you are upgrading from < 1.9.0
+`tidal>=1.9.0` brings some big changes. I **strongly recommend** you move/delete `~/.ghc` and `~/.cabal` directories. This is something I'm uncomfortable automating for the moment, because haskell is not just for tidal.
+
 Common Tidal-related modifications to the SuperCollider `startup.scd` are also supported, see `vars/all.yml` below  
 
 # supported
