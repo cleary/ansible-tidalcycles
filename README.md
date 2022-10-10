@@ -132,8 +132,8 @@ sc_ugens:
     - "mutable-instruments"
 ```
 
- - For available Synths, have a look at the [SynthDef](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/master/templates/mutable-instruments-synthdefs.scd.template)
- - For available options and effects, check out the [parameters.hs](https://raw.githubusercontent.com/cleary/ansible-tidalcycles-synth-mi-ugens/master/templates/mutable-instruments-ugens_parameters.hs.template)
+ - For available Synths, have a look at the [SynthDef](https://github.com/cleary/ansible-tidalcycles-synth-mi-ugens/blob/master/files/mutable-instruments-synthdefs.scd)
+ - For available options and effects, check out the [parameters.hs](https://github.com/cleary/ansible-tidalcycles-synth-mi-ugens/blob/master/files/mutable-instruments-ugens_parameters.hs)
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-synth-mi-ugens
 
