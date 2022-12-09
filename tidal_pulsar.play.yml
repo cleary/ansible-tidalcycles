@@ -1,0 +1,19 @@
+---
+- hosts: all
+
+  pre_tasks:
+    - stat:
+        path: vars/all.yml
+      register: vars_all
+      tags:
+      - config
+
+    - include_vars: vars/all.yml
+      when: vars_all.stat.exists
+      tags:
+      - config
+
+  roles:
+    - roles/meta
+    - roles/tidal
+    - roles/pulsar

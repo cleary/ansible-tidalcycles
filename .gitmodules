@@ -19,3 +19,6 @@
 [submodule "roles/ugens-mutable-instruments"]
 	path = roles/ugens-mutable-instruments
 	url = https://github.com/cleary/ansible-tidalcycles-synth-mi-ugens.git
+[submodule "roles/pulsar"]
+	path = roles/pulsar
+	url = https://github.com/cleary/ansible-tidalcycles-editor-pulsar.git
