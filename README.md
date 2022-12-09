@@ -41,8 +41,8 @@ sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
 # for tidalcycles + vscode
 sudo ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml
 
-# for tidalcycles + atom
-sudo ansible-playbook --connection=local -i localhost, tidal_atom.play.yml
+# for tidalcycles + pulsar (was: atom)
+sudo ansible-playbook --connection=local -i localhost, tidal_pulsar.play.yml
 
 # for tidalcycles + neovim
 sudo ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
@@ -91,12 +91,12 @@ Please note, this *will* replace any existing settings.json, but keep a backup i
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vscode
 
-## atom
-Install the atom editor, including useful plugins for Tidal Cycles.
+## pulsar (was: atom)
+Install the pulsar editor, including useful plugins for Tidal Cycles.
 
 If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your config.cson for the Sound Browser in the tidalcycles plugin.
 
-This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-atom
+This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-pulsar
 
 ## neovim
 Install the neovim editor, including the tidal-vim plugin (sans tmux) for Tidal Cycles.
@@ -141,7 +141,7 @@ This is a git submodule: https://github.com/cleary/ansible-tidalcycles-synth-mi-
 
 ## all.yml.ex
 Support for various custom config attributes can be provided by copying this file to `vars/all.yml` and uncommenting. A summary of options:
- - add a list of paths to local Samples directories, which will be picked up and included in the `startup.scd` file for supercollider, and the Sound Browsers in vscode/atom
+ - add a list of paths to local Samples directories, which will be picked up and included in the `startup.scd` file for supercollider, and the Sound Browsers in vscode/pulsar
  - source sample sets/directories from git repositories (curated examples provided)
  - `startup.scd` defaults can be modified here, including `sc.numOutputBusChannels` commonly used for splitting audio outputs to a DAW
  - MIDI clients can be defined with a simple syntax, which then generates the needed entries in `startup.scd`
