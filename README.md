@@ -44,6 +44,9 @@ sudo ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml
 # for tidalcycles + pulsar (was: atom)
 sudo ansible-playbook --connection=local -i localhost, tidal_pulsar.play.yml
 
+# for tidalcycles + emacs
+sudo ansible-playbook --connection=local -i localhost, tidal_emacs.play.yml
+
 # for tidalcycles + neovim
 sudo ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
 
@@ -97,6 +100,13 @@ Install the pulsar editor, including useful plugins for Tidal Cycles.
 If you provide a list of samples paths via the variable *custom_sample_paths* in `vars/all.yml`, these will be added to your config.cson for the Sound Browser in the tidalcycles plugin.
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-pulsar
+
+## emacs
+Install the emacs editor, including the tidal.el plugin for Tidal Cycles.
+
+Please note, this *will* replace any existing `~/.emacs`, but keep a backup in the same directory, to allow merge/revert. This can be excluded with `--skip-tags "config"`
+
+This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-emacs
 
 ## neovim
 Install the neovim editor, including the tidal-vim plugin (sans tmux) for Tidal Cycles.
