@@ -22,3 +22,6 @@
 [submodule "roles/pulsar"]
 	path = roles/pulsar
 	url = https://github.com/cleary/ansible-tidalcycles-editor-pulsar.git
+[submodule "roles/emacs"]
+	path = roles/emacs
+	url = https://github.com/cleary/ansible-tidalcycles-editor-emacs.git
