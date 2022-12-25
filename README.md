@@ -19,6 +19,7 @@ Unsupported:
  - non-linux environments
  - Archlinux/Manjaro (some attempts were made, please check the [arch_support branch](https://github.com/cleary/ansible-tidalcycles/tree/arch_support))
  - other non-debian based linux distributions (patches welcome!)
+ - `feedforward` is [no longer receiving maintenance](https://github.com/yaxu/feedforward/issues/37#issuecomment-1266558317). The playbooks will remain for any older distro users
  - Ubuntu 18.04/Mint 19 `cabal install` now fails
 
 # usage:
@@ -52,9 +53,6 @@ sudo ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
 
 # for tidalcycles + vim
 sudo ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
-
-# for tidalcycles + feedforward - warning, this is extremely, extremely experimental
-sudo ansible-playbook --connection=local -i localhost, tidal_feedforward.play.yml
 ```
 ## upgrading
 
@@ -122,17 +120,6 @@ Please note, this *will* replace any existing .vimrc, but keep a backup in the s
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
 
-## feedforward
-Install the **experimental** [feedforward editor](https://github.com/yaxu/feedforward) by [@yaxu](https://github.com/yaxu).
-
-**Note: Currently failing on Ubuntu 22.04/jammy and debian 11/bullseye**
-
-VU meter config is automatically included in the startup.scd, and a binary symlink is dropped at `/usr/local/bin/feedforward`
-
-Make sure to check out his [README](https://github.com/yaxu/feedforward/blob/master/README.md), there are lots of gotchas!
-
-This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-feedforward
-
 ## ugens-mutable-instruments
 Install the open source [Mutable Instruments](https://mutable-instruments.net/) [Ugens for SuperCollider](https://github.com/v7b1/mi-UGens), configures autoloading required parameter mappings in all editors.
 
@@ -168,9 +155,7 @@ Vagrant config files for testing our supported distros. Provisions each of the p
 See vagrant/README.md for usage
 
 # todo
-* emacs role: ref https://discord.com/channels/791359191486300172/791359191486300175/984311129515901008
 * investigate `$ QT_QPA_PLATFORM=offscreen sclang` for starting sc instead of virt display
-* feedforward failing to build on debian 11, ubuntu 22.04
 * add vars for loading custom .hs files to boottidal.hs
 * add vars for loading custom .scd files to startup.scd
 * add custom synthdefs to vars
