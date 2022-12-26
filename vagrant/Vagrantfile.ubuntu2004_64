@@ -100,6 +100,13 @@ Vagrant.configure("2") do |config|
     ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
   SHELL
 
+  config.vm.provision "text_management", type:'shell', inline: <<-SHELL
+    apt-get update && apt-get install -y git ansible
+    [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git
+    cd ansible-tidalcycles/
+    ansible-playbook --connection=local -i localhost, tidal_textmanagement.play.yml
+  SHELL
+
   config.vm.provision "vim", type:'shell', inline: <<-SHELL
     apt-get update && apt-get install -y git ansible
     [ -d ${HOME}/ansible-tidalcycles ] || git clone --recurse-submodules https://github.com/cleary/ansible-tidalcycles.git

@@ -120,6 +120,11 @@ Please note, this *will* replace any existing .vimrc, but keep a backup in the s
 
 This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-vim
 
+## text.management
+Install the (currently experimental) [text.management livecode editor by Matthew Kaney](https://github.com/mindofmatthew/text.management), intended as a dedicated livecode editor, currently supporting tidalcycles out of the box.
+
+This is a git submodule: https://github.com/cleary/ansible-tidalcycles-editor-text_management
+
 ## ugens-mutable-instruments
 Install the open source [Mutable Instruments](https://mutable-instruments.net/) [Ugens for SuperCollider](https://github.com/v7b1/mi-UGens), configures autoloading required parameter mappings in all editors.
 
