@@ -1,26 +1,32 @@
 # simplify installation of tidalcycles and editor(s) with ansible
 ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) live coding environment with a single command, supporting multiple editors commonly used with Tidal.
 
-## NOTE: if you are upgrading from < 1.9.0
-`tidal>=1.9.0` brings some big changes. I **strongly recommend** you move/delete `~/.ghc` and `~/.cabal` directories. This is something I'm uncomfortable automating for the moment, because haskell is not just for tidal.
+## NOTE: if you are upgrading from Tidal <= 1.8.1
+`tidal 1.9.0` (and later) brings some big changes in the cabal package handling, requiring `cabal >= 3.0.0.0` and a different install command. 
+
+***You need to*** move/delete `~/.ghc` and `~/.cabal` directories, ie completely reset your haskell package environment. This is something I'm uncomfortable automating for the moment, because haskell is not just for Tidalcycles.
 
 Common Tidal-related modifications to the SuperCollider `startup.scd` are also supported, see `vars/all.yml` below  
 
 # supported
- - ubuntu 22.04/20.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
- - debian 11/10
- - Linux Mint 20
+ - ubuntu 22.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
+ - debian 11
+ - Linux Mint 21
  - ansible >= 2.5
 
+## legacy (Tidal <= 1.8.1)
+ - ubuntu 20.04
+ - debian 10
+ - Linux Mint 20
+
 ## probably also works
- - any other debian based distribution
+ - any other debian based distribution with `cabal >= 3.0.0.0` available
 
 Unsupported:
  - non-linux environments
  - Archlinux/Manjaro (some attempts were made, please check the [arch_support branch](https://github.com/cleary/ansible-tidalcycles/tree/arch_support))
  - other non-debian based linux distributions (patches welcome!)
- - `feedforward` is [no longer receiving maintenance](https://github.com/yaxu/feedforward/issues/37#issuecomment-1266558317). The playbooks will remain for any older distro users
- - Ubuntu 18.04/Mint 19 `cabal install` now fails
+ - `feedforward` is [no longer receiving maintenance](https://github.com/yaxu/feedforward/issues/37#issuecomment-1266558317), I recommend following progress on **text.management** which has similar goals/features
 
 # usage:
 
