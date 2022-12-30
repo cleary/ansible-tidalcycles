@@ -1,14 +1,16 @@
 # simplify installation of tidalcycles and editor(s) with ansible
 ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) live coding environment with a single command, supporting multiple editors commonly used with Tidal.
 
+Common Tidal-related modifications to the SuperCollider `startup.scd` are also supported, see `vars/all.yml` below  
+
 ## NOTE: if you are upgrading from Tidal <= 1.8.1
 `tidal 1.9.0` (and later) brings some big changes in the cabal package handling, requiring `cabal >= 3.0.0.0` and a different install command. 
 
-***You need to*** move/delete `~/.ghc` and `~/.cabal` directories, ie completely reset your haskell package environment. This is something I'm uncomfortable automating for the moment, because haskell is not just for Tidalcycles.
+***You need to*** move/delete `~/.ghc` and `~/.cabal` directories, ie completely reset your haskell package environment.
 
-Common Tidal-related modifications to the SuperCollider `startup.scd` are also supported, see `vars/all.yml` below  
+I have now added a [`remove`](./README.md#removal) function to this tool which can setup a clean tidal slate for you
 
-# supported
+# supported distros
  - ubuntu 22.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
  - debian 11
  - Linux Mint 21
@@ -19,7 +21,7 @@ Common Tidal-related modifications to the SuperCollider `startup.scd` are also s
  - debian 10
  - Linux Mint 20
 
-## probably also works
+### probably also works
  - any other debian based distribution with `cabal >= 3.0.0.0` available
 
 Unsupported:
