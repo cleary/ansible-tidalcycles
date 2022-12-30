@@ -1,0 +1,54 @@
+---
+- hosts: all
+
+  pre_tasks:
+    - debug:
+        msg:
+          - WARNING WARNING WARNING WARNING
+          - ----
+          - This is not a finely crafted surgical tool, it is a hammer.
+          - It will delete Tidal related folders in your home directory, namely
+          -  ~/.ghc
+          -  ~/.cabal
+          -  ~/.local/share/SuperCollider
+          -  ~/.config/SuperCollider
+          - ----
+          - To confirm you understand the risk, and have taken your own backups,
+          - Re-run this playbook with the following command
+          - - sudo ansible-playbook --connection=local -i localhost, tidal_remove.play.yml -t REMOVE
+          - END OF WARNING END OF WARNING
+      when: "'REMOVE' not in ansible_run_tags"
+      tags: always
+      failed_when: true
+
+    - stat:
+        path: vars/all.yml
+      register: vars_all
+      tags:
+      - config
+
+    - include_vars: vars/all.yml
+      when: vars_all.stat.exists
+      tags:
+      - config
+
+  tasks:
+    - name: remove tidal-related directories from user's home
+      file:
+        path: "{{ item }}"
+        state: absent
+      with_items:
+        - "/home/{{ ansible_env.SUDO_USER }}/.cabal"
+        - "/home/{{ ansible_env.SUDO_USER }}/.ghc"
+        - "/home/{{ ansible_env.SUDO_USER }}/.local/share/SuperCollider"
+        - "/home/{{ ansible_env.SUDO_USER }}/.config/SuperCollider"
+      failed_when: false
+      become: yes
+      become_method: su
+      become_user: "{{ansible_env.SUDO_USER}}"
+      become_flags: '-s /bin/bash'
+      tags:
+        - REMOVE
+
+
+

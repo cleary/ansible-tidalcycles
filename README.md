@@ -74,6 +74,20 @@ The only minor gotcha is if you significantly modify any config files that are t
 sudo ansible-playbook --connection=local -i localhost, tidal.play.yml --skip-tags "config"
 ```
 
+## removal
+
+There is a very raw tool for doing removal of tidal related directories.
+
+It is useful when upgrades are failing, `cabal` isn't playing ball, or you may have used the rainbow of install commands available and be in an unknown state.
+
+It will double confirm with you before deleting anything - make sure you understand the message, consequence and have taken care of your own backups of the affected folders.
+
+```
+sudo ansible-playbook --connection=local -i localhost, tidal_remove.play.yml
+```
+
+The tool does not touch packages installed by the package manager, or editor plugins. They are up to you to deal with.
+
 # roles
 
 ## tidal
