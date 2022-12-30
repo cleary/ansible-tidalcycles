@@ -43,25 +43,41 @@ cd ansible-tidalcycles/
 ```
 To apply the setup to a local machine, pick a playbook (please note they are not mutually exclusive - try them all out!):
 
+for **tidalcycles standalone**
 ```
-# for tidalcycles standalone
 sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
+```
 
-# for tidalcycles + vscode
+for **tidalcycles + vscode**
+```
 sudo ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml
+```
 
-# for tidalcycles + pulsar (was: atom)
+for **tidalcycles + pulsar** (was: atom)
+```
 sudo ansible-playbook --connection=local -i localhost, tidal_pulsar.play.yml
+```
 
-# for tidalcycles + emacs
+for **tidalcycles + emacs**
+```
 sudo ansible-playbook --connection=local -i localhost, tidal_emacs.play.yml
+```
 
-# for tidalcycles + neovim
+for **tidalcycles + neovim**
+```
 sudo ansible-playbook --connection=local -i localhost, tidal_neovim.play.yml
+```
 
-# for tidalcycles + vim
+for **tidalcycles + vim**
+```
 sudo ansible-playbook --connection=local -i localhost, tidal_vim.play.yml
 ```
+
+for **text.management** (experimental)
+```
+sudo ansible-playbook --connection=local -i localhost, tidal_textmanagement.play.yml
+```
+
 ## upgrading
 
 The playbooks are designed to be run and re-run, so just run them again to get latest versions of repository packages, haskell packages, git repos etc.
