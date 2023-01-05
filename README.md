@@ -11,15 +11,13 @@ Common Tidal-related modifications to the SuperCollider `startup.scd` are also s
 I have now added a [`remove`](./README.md#removal) function to this tool which can setup a clean tidal slate for you
 
 # supported distros
- - ubuntu 22.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
+ - ubuntu 22.04, 20.04 (and derivatives ie studio kubuntu lubuntu xubuntu etc)
  - debian 11
- - Linux Mint 21
+ - Linux Mint 21, 20
  - ansible >= 2.5
 
 ## legacy (Tidal <= 1.8.1)
- - ubuntu 20.04
  - debian 10
- - Linux Mint 20
 
 ### probably also works
  - any other debian based distribution with `cabal >= 3.0.0.0` available
