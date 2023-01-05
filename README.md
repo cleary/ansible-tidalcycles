@@ -4,7 +4,7 @@ ansible playbooks for installing the [Tidal Cycles](https://tidalcycles.org) liv
 Common Tidal-related modifications to the SuperCollider `startup.scd` are also supported, see `vars/all.yml` below  
 
 ## NOTE: if you are upgrading from Tidal <= 1.8.1
-`tidal 1.9.0` (and later) brings some big changes in the cabal package handling, requiring `cabal >= 3.0.0.0` and a different install command. 
+`tidal 1.9.0` (and later) brings some big changes in the cabal package handling, working best with `cabal >= 3.0.0.0` and a different install command. 
 
 ***You need to*** move/delete `~/.ghc` and `~/.cabal` directories, ie completely reset your haskell package environment.
 
