@@ -113,26 +113,4 @@ Vagrant.configure("2") do |config|
     cd ansible-tidalcycles/
     ansible-playbook --connection=local -i localhost, tidal_vscode.play.yml
   SHELL
-
-  # running from host ansible, not accurate to end user experience
-  # config.vm.provision "tidal", type:'ansible' do |ansible|
-  #   ansible.playbook = "../tidal.play.yml"
-  #   ansible.become = true
-  # end
-  # config.vm.provision "vim", type:'ansible' do |ansible|
-  #   ansible.playbook = "../tidal_vim.play.yml"
-  #   ansible.become = true
-  # end
-  # config.vm.provision "feedforward", type:'ansible' do |ansible|
-  #   ansible.playbook = "../tidal_feedforward.play.yml"
-  #   ansible.become = true
-  # end
-  # config.vm.provision "atom", type:'ansible' do |ansible|
-  #   ansible.playbook = "../tidal_atom.play.yml"
-  #   ansible.become = true
-  # end
-  # config.vm.provision "vscode", type:'ansible' do |ansible|
-  #   ansible.playbook = "../tidal_vscode.play.yml"
-  #   ansible.become = true
-  # end
 end
