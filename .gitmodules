@@ -22,3 +22,6 @@
 [submodule "roles/pulsar"]
 	path = roles/pulsar
 	url = https://github.com/cleary/ansible-tidalcycles-editor-pulsar.git
+[submodule "roles/text_management"]
+	path = roles/text_management
+	url = https://github.com/cleary/ansible-tidalcycles-editor-text_management.git
