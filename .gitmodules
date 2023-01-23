@@ -22,6 +22,3 @@
 [submodule "roles/text_management"]
 	path = roles/text_management
 	url = https://github.com/cleary/ansible-tidalcycles-editor-text_management.git
-[submodule "roles/emacs"]
-	path = roles/emacs
-	url = https://github.com/cleary/ansible-tidalcycles-editor-emacs.git
