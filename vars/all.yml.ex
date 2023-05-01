@@ -21,6 +21,7 @@
 
 # Sample sets have the audio files contained in multiple subdirs of the repository
 #git_sample_sets: 
+#    - https://github.com/lwlsn/Misc_Samples.git
 #    - https://github.com/yaxu/dirt-jv1080.git
 #    - https://github.com/yaxu/dirt-impulse.git
 #    - https://github.com/dktr0/estuary-samples.git
