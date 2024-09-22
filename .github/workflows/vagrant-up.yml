@@ -5,9 +5,13 @@ on: [push]
 jobs:
   vagrant-up:
     runs-on: ubuntu-latest
+    defaults:
+      working-directory: ./vagrant
 
     steps:
-
+    - name: checkout repo
+      uses: actions/checkout@v4
+        
     - name: install virtualbox
       uses: awalsh128/cache-apt-pkgs-action@v1.4.2
       with:
@@ -17,7 +21,6 @@ jobs:
       run: "echo $PWD; ls -la"
 
     - name: Run vagrant up
-
       run: VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up
 
     - name: ssh into box after boot
