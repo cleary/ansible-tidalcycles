@@ -17,7 +17,8 @@ jobs:
       run: vagrant --version
 
     - name: Run vagrant up
-      run: pushd vagrant/ ; VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up; popd
+      working-directory: ./vagrant
+      run: VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up
 
     - name: ssh into box after boot
       run: vagrant ssh -c "echo 'hello world'"
