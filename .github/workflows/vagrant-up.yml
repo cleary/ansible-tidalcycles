@@ -5,6 +5,8 @@ on: [push]
 jobs:
   vagrant-up:
     runs-on: ubuntu-latest
+    defaults:
+
 
     steps:
 
@@ -14,10 +16,10 @@ jobs:
         packages: vagrant, virtualbox
 
     - name: Show Vagrant version
-      run: vagrant --version
+      run: "echo $PWD; ls -la"
 
     - name: Run vagrant up
-      working-directory: ../vagrant
+
       run: VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up
 
     - name: ssh into box after boot
