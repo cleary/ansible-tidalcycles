@@ -6,7 +6,8 @@ jobs:
   vagrant-up:
     runs-on: ubuntu-latest
     defaults:
-      working-directory: ./vagrant
+      run:
+        working-directory: ./vagrant
 
     steps:
     - name: checkout repo
