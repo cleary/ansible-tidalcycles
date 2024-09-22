@@ -5,8 +5,6 @@ on: [push]
 jobs:
   vagrant-up:
     runs-on: ubuntu-latest
-    defaults:
-
 
     steps:
 
