@@ -11,7 +11,7 @@ jobs:
     - name: install virtualbox
       uses: awalsh128/cache-apt-pkgs-action@v1.4.2
       with:
-        packages: virtualbox
+        packages: vagrant, virtualbox
 
     - name: Show Vagrant version
       run: vagrant --version
