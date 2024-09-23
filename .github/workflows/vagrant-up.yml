@@ -13,12 +13,14 @@ jobs:
     steps:
     - name: checkout repo
       uses: actions/checkout@v4
+      with:
+        submodules: true
         
     - name: install basic dependencies
       uses: awalsh128/cache-apt-pkgs-action@v1.4.2
       #uses: ConorMacBride/install-package@v1.1.0
       with:
-        apt: ansible, git
+        packages: ansible, git
 
     - name: run playbook
       run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
