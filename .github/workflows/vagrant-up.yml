@@ -16,7 +16,7 @@ jobs:
     - name: install virtualbox
       uses: awalsh128/cache-apt-pkgs-action@v1.4.2
       with:
-        packages: vagrant, virtualbox
+        packages: vagrant, virtualbox, libvirt-daemon, libvirt-daemon-driver-vbox
 
     - name: Show Vagrant version
       run: "echo $PWD; ls -la"
