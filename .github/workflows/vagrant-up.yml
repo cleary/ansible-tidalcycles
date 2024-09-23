@@ -5,25 +5,20 @@ on: [push]
 jobs:
   vagrant-up:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./vagrant
+    #defaults:
+    #  run:
+    #    working-directory: ./vagrant
 
+    
     steps:
     - name: checkout repo
       uses: actions/checkout@v4
         
-    - name: install libvirt/qemu
-      #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
-      uses: ConorMacBride/install-package@v1.1.0
+    - name: install basic dependencies
+      uses: awalsh128/cache-apt-pkgs-action@v1.4.2
+      #uses: ConorMacBride/install-package@v1.1.0
       with:
-        apt: vagrant qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libvirt-daemon
+        apt: ansible, git
 
-    - name: Show Vagrant version
-      run: "echo $PWD; ls -la"
-
-    - name: Run vagrant up
-      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provider=libvirt
-
-    - name: ssh into box after boot
-      run: vagrant ssh -c "echo 'hello world'"
+    - name: run playbook
+      run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
