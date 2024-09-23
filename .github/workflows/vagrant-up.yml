@@ -22,7 +22,7 @@ jobs:
       run: "echo $PWD; ls -la"
 
     - name: Run vagrant up
-      run: VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up
+      run: VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provider virtualbox
 
     - name: ssh into box after boot
       run: vagrant ssh -c "echo 'hello world'"
