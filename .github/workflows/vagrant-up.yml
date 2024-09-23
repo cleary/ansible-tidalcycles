@@ -17,13 +17,13 @@ jobs:
       #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
       uses: ConorMacBride/install-package@v1.1.0
       with:
-        apt: vagrant virtualbox libvirt-daemon libvirt-daemon-driver-vbox
+        apt: vagrant qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libvirt-daemon
 
     - name: Show Vagrant version
       run: "echo $PWD; ls -la"
 
     - name: Run vagrant up
-      run: VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provider virtualbox
+      run: VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provider=libvirt
 
     - name: ssh into box after boot
       run: vagrant ssh -c "echo 'hello world'"
