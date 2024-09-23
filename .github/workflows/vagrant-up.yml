@@ -13,7 +13,7 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v4
         
-    - name: install virtualbox
+    - name: install libvirt/qemu
       #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
       uses: ConorMacBride/install-package@v1.1.0
       with:
@@ -23,7 +23,7 @@ jobs:
       run: "echo $PWD; ls -la"
 
     - name: Run vagrant up
-      run: VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provider=libvirt
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provider=libvirt
 
     - name: ssh into box after boot
       run: vagrant ssh -c "echo 'hello world'"
