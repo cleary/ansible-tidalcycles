@@ -14,9 +14,10 @@ jobs:
       uses: actions/checkout@v4
         
     - name: install virtualbox
-      uses: awalsh128/cache-apt-pkgs-action@v1.4.2
+      #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
+      uses: ConorMacBride/install-package@v1.1.0
       with:
-        packages: vagrant, virtualbox, libvirt-daemon, libvirt-daemon-driver-vbox
+        apt: vagrant, virtualbox, libvirt-daemon, libvirt-daemon-driver-vbox
 
     - name: Show Vagrant version
       run: "echo $PWD; ls -la"
