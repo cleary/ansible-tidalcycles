@@ -13,10 +13,11 @@ jobs:
         submodules: true
 
     - name: install basic dependencies
-      uses: awalsh128/cache-apt-pkgs-action@v1.4.2
-      #uses: ConorMacBride/install-package@v1.1.0
+        #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
+      uses: ConorMacBride/install-package@v1.1.0
       with:
-        packages: ansible, git
+          #packages: ansible, git
+        apt: ansible git
 
     - name: run playbook
       run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
@@ -31,10 +32,11 @@ jobs:
         submodules: true
 
     - name: install basic dependencies
-      uses: awalsh128/cache-apt-pkgs-action@v1.4.2
-      #uses: ConorMacBride/install-package@v1.1.0
+        #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
+      uses: ConorMacBride/install-package@v1.1.0
       with:
-        packages: ansible, git
+          #packages: ansible, git
+        apt: ansible git
 
     - name: run playbook
       run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
@@ -49,10 +51,11 @@ jobs:
         submodules: true
 
     - name: install basic dependencies
-      uses: awalsh128/cache-apt-pkgs-action@v1.4.2
-      #uses: ConorMacBride/install-package@v1.1.0
+        #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
+      uses: ConorMacBride/install-package@v1.1.0
       with:
-        packages: ansible, git
+          #packages: ansible, git
+        apt: ansible git
 
     - name: run playbook
       run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
