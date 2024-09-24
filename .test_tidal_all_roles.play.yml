@@ -1,0 +1,25 @@
+---
+- hosts: all
+
+  pre_tasks:
+    - stat:
+        path: vars/.test_vars_all.yml
+      register: vars_all
+      tags:
+      - config
+
+    - include_vars: vars/.test_vars_all.yml
+      when: vars_all.stat.exists
+      tags:
+      - config
+
+  roles:
+    - roles/meta
+    - roles/tidal
+    - roles/neovim
+    - roles/emacs
+    - roles/pulsar
+    - roles/text_management
+    - roles/vim
+    - roles/vscode
+
