@@ -16,9 +16,6 @@ I have now added a [`remove`](./README.md#removal) function to this tool which c
  - Linux Mint 22, 21, 20
  - ansible >= 2.5
 
-## legacy (Tidal <= 1.8.1)
- - debian 10
-
 ### probably also works
  - any other debian based distribution with `cabal >= 3.0.0.0` available
 
