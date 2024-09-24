@@ -1,0 +1,61 @@
+name: ubuntu-2404
+
+on: [push]
+
+jobs:
+  ubuntu-2404:
+    runs-on: ubuntu-24.04
+
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+
+    - name: install basic dependencies
+        #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
+      uses: ConorMacBride/install-package@v1.1.0
+      with:
+          #packages: ansible, git
+        apt: ansible git
+
+    - name: run playbook
+      run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
+
+  ubuntu-2204:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+
+    - name: install basic dependencies
+        #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
+      uses: ConorMacBride/install-package@v1.1.0
+      with:
+          #packages: ansible, git
+        apt: ansible git
+
+    - name: run playbook
+      run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
+
+  ubuntu-2004:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+
+    - name: install basic dependencies
+        #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
+      uses: ConorMacBride/install-package@v1.1.0
+      with:
+          #packages: ansible, git
+        apt: ansible git
+
+    - name: run playbook
+      run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
