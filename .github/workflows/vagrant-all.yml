@@ -18,10 +18,12 @@ jobs:
       #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
       uses: ConorMacBride/install-package@v1.1.0
       with:
-        apt: vagrant qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libvirt-daemon
+        #apt: vagrant qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libvirt-daemon
+        apt: vagrant qemu-kvm virtualbox libvirt-daemon libvirt-daemon-driver-vbox
 
     - name: Show Vagrant version
       run: "echo $PWD; ls -la"
 
     - name: Run vagrant up
-      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian11_64 vagrant up --provision --provider=libvirt
+      #run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian11_64 vagrant up --provision --provider=libvirt
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian11_64 vagrant up --provision --provider=virtualbox
