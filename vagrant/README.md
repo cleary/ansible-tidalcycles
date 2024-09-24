@@ -8,6 +8,7 @@ For VirtualBox:
 ```
 sudo apt-get install vagrant virtualbox-qt libvirt-daemon libvirt-daemon-driver-vbox
 ```
+Some test playbooks have been added for all roles
 
 ## running a single container
 
