@@ -4,7 +4,7 @@ name: vagrant-all
 on: [push]
 
 jobs:
-  debian11:
+  vagrant-all:
     runs-on: ubuntu-20.04
     defaults:
       run:
@@ -15,15 +15,24 @@ jobs:
       uses: actions/checkout@v4
         
     - name: install vagrant/qemu provider
-      #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
       uses: ConorMacBride/install-package@v1.1.0
       with:
-        #apt: vagrant qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libvirt-daemon
         apt: vagrant qemu-kvm virtualbox libvirt-daemon libvirt-daemon-driver-vbox
 
-    - name: Show Vagrant version
-      run: "echo $PWD; ls -la"
+    - name: test Vagrantfile.debian10_64
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian10_64 vagrant up --provision --provider=virtualbox
 
-    - name: Run vagrant up
-      #run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian11_64 vagrant up --provision --provider=libvirt
+    - name: test Vagrantfile.debian11_64
       run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian11_64 vagrant up --provision --provider=virtualbox
+
+    - name: test Vagrantfile.debian12_64
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
+
+    - name: test Vagrantfile.mint20_64
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
+
+    - name: test Vagrantfile.mint21_64
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
+
+    - name: test Vagrantfile.mint22_64
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox

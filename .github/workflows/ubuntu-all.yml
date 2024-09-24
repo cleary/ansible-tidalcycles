@@ -20,7 +20,7 @@ jobs:
         apt: ansible git
 
     - name: run playbook
-      run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
+      run: sudo ansible-playbook --connection=local -i localhost, .test_tidal_all_roles.play.yml
 
   ubuntu-2204:
     runs-on: ubuntu-22.04
@@ -39,7 +39,7 @@ jobs:
         apt: ansible git
 
     - name: run playbook
-      run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
+      run: sudo ansible-playbook --connection=local -i localhost, .test_tidal_all_roles.play.yml
 
   ubuntu-2004:
     runs-on: ubuntu-20.04
@@ -58,4 +58,4 @@ jobs:
         apt: ansible git
 
     - name: run playbook
-      run: sudo ansible-playbook --connection=local -i localhost, tidal.play.yml
+      run: sudo ansible-playbook --connection=local -i localhost, .test_tidal_all_roles.play.yml
