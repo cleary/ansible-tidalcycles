@@ -20,19 +20,25 @@ jobs:
         apt: vagrant qemu-kvm virtualbox libvirt-daemon libvirt-daemon-driver-vbox
 
     - name: test Vagrantfile.debian10_64
+      if: always()
       run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian10_64 vagrant up --provision --provider=virtualbox
 
     - name: test Vagrantfile.debian11_64
+      if: always()
       run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian11_64 vagrant up --provision --provider=virtualbox
 
     - name: test Vagrantfile.debian12_64
+      if: always()
       run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
 
     - name: test Vagrantfile.mint20_64
+      if: always()
       run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
 
     - name: test Vagrantfile.mint21_64
+      if: always()
       run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
 
     - name: test Vagrantfile.mint22_64
+      if: always()
       run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
