@@ -14,7 +14,7 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v4
         
-    - name: install virtualbox
+    - name: install vagrant/qemu provider
       #uses: awalsh128/cache-apt-pkgs-action@v1.4.2
       uses: ConorMacBride/install-package@v1.1.0
       with:
