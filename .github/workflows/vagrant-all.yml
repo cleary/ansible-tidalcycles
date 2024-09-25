@@ -23,18 +23,38 @@ jobs:
       if: always()
       run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian11_64 vagrant up --provision --provider=virtualbox
 
+    - name: destroy Vagrantfile.debian11_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian11_64 vagrant destroy
+
     - name: test Vagrantfile.debian12_64
       if: always()
       run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
 
+    - name: destroy Vagrantfile.debian12_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant destroy
+
     - name: test Vagrantfile.mint20_64
       if: always()
-      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.mint20_64 vagrant up --provision --provider=virtualbox
+
+    - name: destroy Vagrantfile.mint20_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.mint20_64 vagrant destroy
 
     - name: test Vagrantfile.mint21_64
       if: always()
-      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.mint21_64 vagrant up --provision --provider=virtualbox
+
+    - name: destroy Vagrantfile.mint21_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.mint21_64 vagrant destroy
 
     - name: test Vagrantfile.mint22_64
       if: always()
-      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.debian12_64 vagrant up --provision --provider=virtualbox
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.mint22_64 vagrant up --provision --provider=virtualbox
+
+    - name: destroy Vagrantfile.mint22_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.mint22_64 vagrant destroy
