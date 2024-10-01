@@ -16,6 +16,7 @@ jobs:
       with:
         repo: deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com noble main
         keys-asc: https://apt.releases.hashicorp.com/gpg
+        install: vagrant
     
     - name: checkout repo
       uses: actions/checkout@v4
