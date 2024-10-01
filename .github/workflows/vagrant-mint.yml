@@ -1,10 +1,10 @@
 
-name: vagrant-all
+name: vagrant-mint
 
 on: [push]
 
 jobs:
-  vagrant-all:
+  vagrant-mint-all:
     runs-on: ubuntu-24.04
     defaults:
       run:

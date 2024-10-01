@@ -1,10 +1,10 @@
 
-name: vagrant-all
+name: vagrant-debian
 
 on: [push]
 
 jobs:
-  vagrant-all:
+  vagrant-debian-all:
     runs-on: ubuntu-24.04
     defaults:
       run:
