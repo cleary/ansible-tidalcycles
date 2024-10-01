@@ -27,14 +27,6 @@ jobs:
       with:
         apt: vagrant qemu-kvm virtualbox libvirt-daemon libvirt-daemon-driver-vbox
 
-    - name: test Vagrantfile.mint20_64
-      if: always()
-      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.mint20_64 vagrant up --provision --provider=virtualbox
-
-    - name: destroy Vagrantfile.mint20_64
-      if: always()
-      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.mint20_64 vagrant destroy -f
-
     - name: test Vagrantfile.mint21_64
       if: always()
       run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.mint21_64 vagrant up --provision --provider=virtualbox
