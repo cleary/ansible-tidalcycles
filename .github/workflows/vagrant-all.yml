@@ -5,12 +5,18 @@ on: [push]
 
 jobs:
   vagrant-all:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     defaults:
       run:
         working-directory: ./vagrant
 
     steps:
+    - name: add vagrant packages repo
+      uses: myci-actions/add-deb-repo@11
+      with:
+        repo: deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com noble main
+        keys-asc: https://apt.releases.hashicorp.com/gpg
+    
     - name: checkout repo
       uses: actions/checkout@v4
         
