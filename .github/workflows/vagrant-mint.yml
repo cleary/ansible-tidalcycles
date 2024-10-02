@@ -3,7 +3,7 @@ name: vagrant-mint
 
 on:
   push:
-    branches: main
+    branches: master
   pull_request:
     types:
       - opened
