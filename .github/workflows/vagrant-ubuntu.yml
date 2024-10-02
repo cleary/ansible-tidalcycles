@@ -1,0 +1,52 @@
+
+name: vagrant-ubuntu
+
+on: [push]
+
+jobs:
+  vagrant-ubuntu-all:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: ./vagrant
+
+    steps:
+    - name: add vagrant packages repo
+      uses: myci-actions/add-deb-repo@11
+      with:
+        repo: deb https://apt.releases.hashicorp.com noble main
+        repo-name: vagrant
+        keys-asc: https://apt.releases.hashicorp.com/gpg
+        install: vagrant
+    
+    - name: checkout repo
+      uses: actions/checkout@v4
+        
+    - name: install vagrant/qemu provider
+      uses: ConorMacBride/install-package@v1.1.0
+      with:
+        apt: vagrant qemu-kvm virtualbox libvirt-daemon libvirt-daemon-driver-vbox
+
+    - name: test Vagrantfile.ubuntu2004_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.ubuntu2004_64 vagrant up --provision --provider=virtualbox
+
+    - name: destroy Vagrantfile.ubuntu2004_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.ubuntu2004_64 vagrant destroy -f
+
+    - name: test Vagrantfile.ubuntu2204_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.ubuntu2204_64 vagrant up --provision --provider=virtualbox
+
+    - name: destroy Vagrantfile.ubuntu2204_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.ubuntu2204_64 vagrant destroy -f
+
+    - name: test Vagrantfile.ubuntu2404_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.ubuntu2404_64 vagrant up --provision --provider=virtualbox
+
+    - name: destroy Vagrantfile.ubuntu2404_64
+      if: always()
+      run: sudo VAGRANT_VAGRANTFILE=Vagrantfile.ubuntu2404_64 vagrant destroy -f
