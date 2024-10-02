@@ -1,7 +1,12 @@
 
 name: vagrant-debian
 
-on: [push]
+on: 
+  push:
+    branches: main
+  pull_request:
+    types:
+      - opened
 
 jobs:
   vagrant-debian-all:

@@ -1,7 +1,12 @@
 
 name: vagrant-ubuntu
 
-on: [push]
+on:
+  push:
+    branches: main
+  pull_request:
+    types:
+      - opened
 
 jobs:
   vagrant-ubuntu-all:
